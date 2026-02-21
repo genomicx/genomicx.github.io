@@ -1,0 +1,53 @@
+[
+  {
+    "id": "brigx",
+    "name": "BRIGx",
+    "tagline": "Circular Genome Comparison",
+    "description": "Generate publication-quality circular plots comparing bacterial genomes. Upload a reference and query genomes to visualize sequence similarity with interactive, zoomable ring diagrams.",
+    "icon": "rings",
+    "tech": ["LASTZ", "WebAssembly", "Web Workers", "SVG"],
+    "features": [
+      "Multi-threaded alignment via Web Workers",
+      "Interactive zoom and pan",
+      "SVG export for publications",
+      "Supports draft assemblies"
+    ],
+    "demoUrl": "https://brigx-eight.vercel.app",
+    "sourceUrl": "https://github.com/happykhan/brigx",
+    "color": "#6366f1"
+  },
+  {
+    "id": "mlstx",
+    "name": "MLSTx",
+    "tagline": "Multi-Locus Sequence Typing",
+    "description": "Type bacterial genomes using MLST schemes directly in your browser. Supports E. coli, Salmonella, S. aureus and more with instant results and CSV export.",
+    "icon": "dna",
+    "tech": ["minimap2", "WebAssembly", "Biowasm", "TypeScript"],
+    "features": [
+      "Multiple MLST schemes",
+      "FASTA and gzipped input",
+      "CSV export",
+      "Dark and light mode"
+    ],
+    "demoUrl": "https://mlstx.vercel.app",
+    "sourceUrl": "https://github.com/happykhan/mlstx",
+    "color": "#06b6d4"
+  },
+  {
+    "id": "mashtreewebx",
+    "name": "MashtreeWebx",
+    "tagline": "Rapid Distance Trees",
+    "description": "Build quick phylogenetic trees from genome assemblies using Mash distances. Get a neighbor-joining tree in seconds, entirely in your browser.",
+    "icon": "tree",
+    "tech": ["Mash", "WebAssembly", "TypeScript", "Vite"],
+    "features": [
+      "Mash distance estimation",
+      "Neighbor-joining trees",
+      "Fast, client-side processing",
+      "Interactive tree viewer"
+    ],
+    "demoUrl": "https://mashtreewebx.vercel.app",
+    "sourceUrl": "https://github.com/happykhan/mashtreewebx",
+    "color": "#10b981"
+  }
+]
