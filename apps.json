@@ -49,5 +49,22 @@
     "demoUrl": "https://mashtreewebx.vercel.app",
     "sourceUrl": "https://github.com/genomicx/mashtreewebx",
     "color": "#14B8A6"
+  },
+  {
+    "id": "ronaqc",
+    "name": "RonaQC",
+    "tagline": "SARS-CoV-2 Sequencing QC",
+    "description": "Quality control for SARS-CoV-2 sequencing data. Upload BAM files to assess cross-contamination, primer coverage, and consensus quality. Determine if samples are reliable for phylogenetic analysis and public database submission.",
+    "icon": "shield",
+    "tech": ["samtools", "ivar", "WebAssembly", "Next.js"],
+    "features": [
+      "Negative control contamination check",
+      "Per-sample coverage and amplicon analysis",
+      "Consensus generation with QC judgement",
+      "CSV/TSV export and interactive plots"
+    ],
+    "demoUrl": "https://rona-qc.vercel.app",
+    "sourceUrl": "https://github.com/genomicx/ronaQC",
+    "color": "#14B8A6"
   }
 ]
