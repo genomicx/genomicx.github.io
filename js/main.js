@@ -129,6 +129,21 @@ function statusBadge(value) {
   return `<span class="status-badge ${value}">${label}</span>`;
 }
 
+function renderToolsOverview(apps) {
+  const tbody = document.getElementById('tools-overview-body');
+  if (!tbody) return;
+
+  apps.forEach(app => {
+    const row = document.createElement('tr');
+    row.innerHTML = `
+      <td class="tool-name">${app.name}</td>
+      <td style="white-space:nowrap">${app.tagline}</td>
+      <td style="white-space:normal;min-width:280px">${app.description}</td>
+    `;
+    tbody.appendChild(row);
+  });
+}
+
 function renderRoadmap(apps) {
   const tbody = document.getElementById('roadmap-body');
   if (!tbody) return;
@@ -159,6 +174,7 @@ async function loadApps() {
     if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
     const apps = await resp.json();
     renderApps(apps);
+    renderToolsOverview(apps);
     renderRoadmap(apps);
   } catch (err) {
     console.error('Failed to load apps:', err);
