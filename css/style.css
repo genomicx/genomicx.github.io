@@ -292,11 +292,13 @@ img {
   transition: all var(--gx-transition);
 }
 
+a.btn-primary,
 .btn-primary {
   background: var(--gx-accent);
   color: var(--gx-text-inverted);
 }
 
+a.btn-primary:hover,
 .btn-primary:hover {
   background: var(--gx-accent-hover);
   color: var(--gx-text-inverted);
