@@ -90,5 +90,97 @@
       "webDev": "done",
       "benchmarking": "done"
     }
+  },
+  {
+    "id": "specx",
+    "name": "Specx",
+    "tagline": "Rapid Speciation & Quality Control",
+    "description": "Identify bacterial species and assess assembly quality directly in the browser. Upload genome assemblies to get rapid taxonomic classification, contamination screening, and completeness metrics — no server required.",
+    "icon": "microscope",
+    "tech": ["Mash", "WebAssembly", "TypeScript", "Vite"],
+    "features": [
+      "Rapid species identification from assemblies",
+      "Assembly quality and completeness checks",
+      "Contamination screening",
+      "Client-side processing with instant results"
+    ],
+    "demoUrl": "",
+    "sourceUrl": "",
+    "color": "#14B8A6",
+    "status": {
+      "scoping": "in-progress",
+      "pipeline": "not-started",
+      "webDev": "not-started",
+      "benchmarking": "not-started"
+    }
+  },
+  {
+    "id": "genetrax",
+    "name": "Genetrax",
+    "tagline": "AMR & Virulence Genotyping",
+    "description": "Screen bacterial genomes for antimicrobial resistance genes and virulence factors in your browser. Upload assemblies to detect clinically relevant genetic markers with detailed annotation and exportable reports.",
+    "icon": "zap",
+    "tech": ["BLAST", "WebAssembly", "TypeScript", "Vite"],
+    "features": [
+      "AMR gene detection from assemblies",
+      "Virulence factor screening",
+      "Detailed gene annotations and reports",
+      "CSV and JSON export"
+    ],
+    "demoUrl": "",
+    "sourceUrl": "",
+    "color": "#14B8A6",
+    "status": {
+      "scoping": "in-progress",
+      "pipeline": "not-started",
+      "webDev": "not-started",
+      "benchmarking": "not-started"
+    }
+  },
+  {
+    "id": "pmlstx",
+    "name": "pMLSTx",
+    "tagline": "Plasmid MLST Typing",
+    "description": "Type plasmid replicons using pMLST schemes entirely in the browser. Identify plasmid incompatibility groups and sequence types from bacterial genome assemblies with instant, privacy-preserving analysis.",
+    "icon": "link",
+    "tech": ["minimap2", "WebAssembly", "TypeScript", "Vite"],
+    "features": [
+      "Plasmid replicon typing",
+      "Multiple pMLST scheme support",
+      "Incompatibility group identification",
+      "FASTA and gzipped input"
+    ],
+    "demoUrl": "",
+    "sourceUrl": "",
+    "color": "#14B8A6",
+    "status": {
+      "scoping": "in-progress",
+      "pipeline": "not-started",
+      "webDev": "not-started",
+      "benchmarking": "not-started"
+    }
+  },
+  {
+    "id": "impressx",
+    "name": "Impressx",
+    "tagline": "EMBOSS Tools in the Browser",
+    "description": "Run classic EBI-EMBOSS sequence analysis utilities directly in your browser. Access widely-used tools for sequence alignment, restriction analysis, and motif searching — all client-side with no uploads to external servers.",
+    "icon": "wrench",
+    "tech": ["EMBOSS", "WebAssembly", "TypeScript", "Vite"],
+    "features": [
+      "Classic EMBOSS utilities in-browser",
+      "Sequence alignment and analysis",
+      "Restriction site and motif searching",
+      "Fully client-side, no data leaves your machine"
+    ],
+    "demoUrl": "",
+    "sourceUrl": "",
+    "color": "#14B8A6",
+    "status": {
+      "scoping": "in-progress",
+      "pipeline": "not-started",
+      "webDev": "not-started",
+      "benchmarking": "not-started"
+    }
   }
 ]
