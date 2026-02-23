@@ -13,8 +13,8 @@
       "Supports draft assemblies"
     ],
     "demoUrl": "https://brigx-eight.vercel.app",
-    "sourceUrl": "https://github.com/happykhan/brigx",
-    "color": "#6366f1"
+    "sourceUrl": "https://github.com/genomicx/brigx",
+    "color": "#14B8A6"
   },
   {
     "id": "mlstx",
@@ -30,8 +30,8 @@
       "Dark and light mode"
     ],
     "demoUrl": "https://mlstx.vercel.app",
-    "sourceUrl": "https://github.com/happykhan/mlstx",
-    "color": "#06b6d4"
+    "sourceUrl": "https://github.com/genomicx/mlstx",
+    "color": "#14B8A6"
   },
   {
     "id": "mashtreewebx",
@@ -47,7 +47,7 @@
       "Interactive tree viewer"
     ],
     "demoUrl": "https://mashtreewebx.vercel.app",
-    "sourceUrl": "https://github.com/happykhan/mashtreewebx",
-    "color": "#10b981"
+    "sourceUrl": "https://github.com/genomicx/mashtreewebx",
+    "color": "#14B8A6"
   }
 ]
