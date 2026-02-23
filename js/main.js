@@ -1,7 +1,7 @@
 /**
  * Genomicx Portfolio - Main JS
- * Loads app data from apps.json and renders cards dynamically.
- * To add a new app, just add an entry to apps.json.
+ * Loads app data from apps.json, renders cards & roadmap dynamically.
+ * Includes dark/light theme toggle support.
  */
 
 const SVG_ICONS = {
@@ -15,6 +15,43 @@ const SVG_ICONS = {
 function getIcon(iconName) {
   return SVG_ICONS[iconName] || SVG_ICONS.default;
 }
+
+/* =========================================================================
+   THEME
+   ========================================================================= */
+
+const THEME_KEY = 'gx-theme';
+
+function initTheme() {
+  const saved = localStorage.getItem(THEME_KEY);
+  const theme = saved || 'dark';
+  document.documentElement.setAttribute('data-theme', theme);
+  updateToggleIcon(theme);
+}
+
+function toggleTheme() {
+  const current = document.documentElement.getAttribute('data-theme') || 'dark';
+  const next = current === 'dark' ? 'light' : 'dark';
+  document.documentElement.setAttribute('data-theme', next);
+  localStorage.setItem(THEME_KEY, next);
+  updateToggleIcon(next);
+}
+
+function updateToggleIcon(theme) {
+  const btn = document.getElementById('theme-toggle');
+  if (!btn) return;
+  if (theme === 'dark') {
+    btn.innerHTML = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>`;
+    btn.setAttribute('aria-label', 'Switch to light mode');
+  } else {
+    btn.innerHTML = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>`;
+    btn.setAttribute('aria-label', 'Switch to dark mode');
+  }
+}
+
+/* =========================================================================
+   APP CARDS
+   ========================================================================= */
 
 function createAppCard(app) {
   const card = document.createElement('article');
@@ -57,7 +94,6 @@ function renderApps(apps) {
   const grid = document.getElementById('apps-grid');
   if (!grid) return;
 
-  // Update the app count in the hero badge
   const countEl = document.getElementById('app-count');
   if (countEl) {
     countEl.textContent = apps.length;
@@ -67,7 +103,6 @@ function renderApps(apps) {
     grid.appendChild(createAppCard(app));
   });
 
-  // Trigger animations
   requestAnimationFrame(() => {
     grid.querySelectorAll('.animate-in').forEach(el => {
       el.style.opacity = '';
@@ -75,23 +110,62 @@ function renderApps(apps) {
   });
 }
 
+/* =========================================================================
+   ROADMAP TABLE
+   ========================================================================= */
+
+function statusBadge(value) {
+  const labels = {
+    'done': 'Done',
+    'in-progress': 'In Progress',
+    'pending': 'Pending',
+    'not-started': 'Not Started'
+  };
+  const label = labels[value] || value;
+  return `<span class="status-badge ${value}">${label}</span>`;
+}
+
+function renderRoadmap(apps) {
+  const tbody = document.getElementById('roadmap-body');
+  if (!tbody) return;
+
+  apps.forEach(app => {
+    const status = app.status || {};
+    const row = document.createElement('tr');
+    row.innerHTML = `
+      <td class="tool-name">${app.name}</td>
+      <td>${statusBadge(status.scoping || 'not-started')}</td>
+      <td>${statusBadge(status.pipeline || 'not-started')}</td>
+      <td>${statusBadge(status.webDev || 'not-started')}</td>
+      <td>${statusBadge(status.benchmarking || 'not-started')}</td>
+      <td>${app.sourceUrl ? `<a href="${app.sourceUrl}" target="_blank" rel="noopener">Repo</a>` : '—'}</td>
+      <td>${app.demoUrl ? `<a href="${app.demoUrl}" target="_blank" rel="noopener">Live</a>` : '—'}</td>
+    `;
+    tbody.appendChild(row);
+  });
+}
+
+/* =========================================================================
+   LOAD & INIT
+   ========================================================================= */
+
 async function loadApps() {
   try {
     const resp = await fetch('apps.json');
     if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
     const apps = await resp.json();
     renderApps(apps);
+    renderRoadmap(apps);
   } catch (err) {
     console.error('Failed to load apps:', err);
     const grid = document.getElementById('apps-grid');
     if (grid) {
-      grid.innerHTML = `<p style="color: var(--text-muted); text-align: center; grid-column: 1/-1;">
+      grid.innerHTML = `<p style="color: var(--gx-text-muted); text-align: center; grid-column: 1/-1;">
         Unable to load apps. Please try refreshing the page.</p>`;
     }
   }
 }
 
-// Mobile nav toggle
 function initNav() {
   const toggle = document.querySelector('.nav-toggle');
   const links = document.querySelector('.nav-links');
@@ -102,9 +176,15 @@ function initNav() {
       toggle.setAttribute('aria-expanded', expanded);
     });
   }
+
+  const themeBtn = document.getElementById('theme-toggle');
+  if (themeBtn) {
+    themeBtn.addEventListener('click', toggleTheme);
+  }
 }
 
 document.addEventListener('DOMContentLoaded', () => {
+  initTheme();
   initNav();
   loadApps();
 });

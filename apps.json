@@ -14,7 +14,13 @@
     ],
     "demoUrl": "https://brigx-eight.vercel.app",
     "sourceUrl": "https://github.com/genomicx/brigx",
-    "color": "#14B8A6"
+    "color": "#14B8A6",
+    "status": {
+      "scoping": "done",
+      "pipeline": "done",
+      "webDev": "done",
+      "benchmarking": "in-progress"
+    }
   },
   {
     "id": "mlstx",
@@ -31,7 +37,13 @@
     ],
     "demoUrl": "https://mlstx.vercel.app",
     "sourceUrl": "https://github.com/genomicx/mlstx",
-    "color": "#14B8A6"
+    "color": "#14B8A6",
+    "status": {
+      "scoping": "done",
+      "pipeline": "done",
+      "webDev": "done",
+      "benchmarking": "in-progress"
+    }
   },
   {
     "id": "mashtreewebx",
@@ -48,7 +60,13 @@
     ],
     "demoUrl": "https://mashtreewebx.vercel.app",
     "sourceUrl": "https://github.com/genomicx/mashtreewebx",
-    "color": "#14B8A6"
+    "color": "#14B8A6",
+    "status": {
+      "scoping": "done",
+      "pipeline": "done",
+      "webDev": "done",
+      "benchmarking": "in-progress"
+    }
   },
   {
     "id": "ronaqc",
@@ -65,6 +83,12 @@
     ],
     "demoUrl": "https://rona-qc.vercel.app",
     "sourceUrl": "https://github.com/genomicx/ronaQC",
-    "color": "#14B8A6"
+    "color": "#14B8A6",
+    "status": {
+      "scoping": "done",
+      "pipeline": "done",
+      "webDev": "done",
+      "benchmarking": "done"
+    }
   }
 ]
