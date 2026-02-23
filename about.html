@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About - Genomicx</title>
-  <meta name="description" content="About Nabil-Fareed Alikhan, bioinformatics researcher building browser-based genomics tools.">
+  <title>Mission - GenomicX</title>
+  <meta name="description" content="GenomicX is a community-driven initiative to make powerful bioinformatics accessible, private, and open to everyone through browser-based tools.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -25,7 +25,7 @@
           <path d="M17 6l-2.5 2.5"/><path d="M14 8l-1 1"/>
           <path d="M7 18l2.5-2.5"/><path d="M3.5 14.5l.5-.5"/>
         </svg>
-        <span>Genomicx</span>
+        <span>GenomicX</span>
       </a>
 
       <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
@@ -33,8 +33,9 @@
       </button>
 
       <ul class="nav-links">
-        <li><a href="index.html">Tools</a></li>
-        <li><a href="about.html" class="active">About</a></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html#tools">Tools</a></li>
+        <li><a href="about.html" class="active">Mission</a></li>
         <li>
           <a href="https://github.com/genomicx" target="_blank" rel="noopener" class="nav-github">
             <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
@@ -47,38 +48,138 @@
 
   <!-- About Hero -->
   <header class="about-hero">
-    <h1>About Genomicx</h1>
-    <p>Open-source browser bioinformatics, built by a researcher who needed them to exist.</p>
+    <h1>Genomic science should be <span class="gradient-text">open to everyone</span></h1>
+    <p>GenomicX exists to lower the barriers to modern bioinformatics &mdash; making powerful analysis tools free, private, and as easy to use as opening a web page.</p>
   </header>
 
   <!-- About Content -->
   <main class="about-content">
 
+    <!-- Mission -->
     <div class="about-card animate-in">
-      <h2>The Project</h2>
+      <h2>Our Mission</h2>
       <p>
-        Genomicx is a growing collection of bioinformatics web applications built to run entirely in the browser using WebAssembly. Each tool compiles established command-line bioinformatics software (like minimap2, LASTZ, and Mash) into WebAssembly modules, letting researchers run real analyses without installing software, configuring servers, or uploading sensitive data to third-party services.
+        Bioinformatics has a barrier-to-entry problem. Most tools require command-line experience, specific operating systems, complex dependency chains, or institutional computing resources. That leaves out students learning on personal laptops, clinicians who need quick answers, researchers at under-resourced institutions, and curious minds everywhere.
       </p>
       <p>
-        The goal is simple: make everyday genomics tasks as easy as opening a web page. Every tool is free, open source, and designed to work on any modern browser.
+        GenomicX is building infrastructure to change that. We compile established, peer-reviewed bioinformatics tools into WebAssembly so they run at near-native speed, entirely in the browser. No installs. No servers. No data leaving your machine. Just open a URL and analyse.
+      </p>
+      <p>
+        The browser is the most universal computing platform on earth. We think it should also be the most accessible bioinformatics platform.
       </p>
     </div>
 
+    <!-- Principles -->
     <div class="about-card animate-in">
-      <h2>Nabil-Fareed Alikhan</h2>
-      <p>
-        Nabil-Fareed Alikhan is a bioinformatics researcher and software developer at the Centre for Genomic Pathogen Surveillance, University of Oxford. His work focuses on microbial genomics, developing widely-used open-source tools for prokaryote genome analysis and visualization.
-      </p>
-      <p>
-        He is the co-creator of BRIG (BLAST Ring Image Generator), published in BMC Genomics, and co-hosts the <a href="https://www.microbinfie.com/" target="_blank" rel="noopener">MicroBinfie Podcast</a> exploring microbial bioinformatics. His research emphasizes practical, open science approaches to bacterial genomics.
-      </p>
+      <h2>Principles</h2>
+      <div class="principles-list">
+        <div class="principle-item">
+          <div class="principle-number">1</div>
+          <div>
+            <h4>Privacy is non-negotiable</h4>
+            <p>Genomic data is sensitive. Every GenomicX tool processes data locally in the browser. Nothing is uploaded, stored, or transmitted. Your data stays on your machine, always.</p>
+          </div>
+        </div>
+        <div class="principle-item">
+          <div class="principle-number">2</div>
+          <div>
+            <h4>Open source, open science</h4>
+            <p>Every tool is free and open source. The code is public. The methods are transparent. Science built on GenomicX tools is reproducible by anyone.</p>
+          </div>
+        </div>
+        <div class="principle-item">
+          <div class="principle-number">3</div>
+          <div>
+            <h4>Accessibility over complexity</h4>
+            <p>If a tool requires a manual to get started, we haven't finished building it. Good bioinformatics software should be usable by a motivated student on day one.</p>
+          </div>
+        </div>
+        <div class="principle-item">
+          <div class="principle-number">4</div>
+          <div>
+            <h4>Community-driven development</h4>
+            <p>GenomicX is shaped by the people who use it. Feature requests, bug reports, new tools, documentation improvements &mdash; every contribution matters.</p>
+          </div>
+        </div>
+        <div class="principle-item">
+          <div class="principle-number">5</div>
+          <div>
+            <h4>Build on what works</h4>
+            <p>We don't reinvent algorithms. We take proven, peer-reviewed bioinformatics tools and bring them to the browser using WebAssembly. Trusted science, new delivery.</p>
+          </div>
+        </div>
+      </div>
+    </div>
 
+    <!-- Who it's for -->
+    <div class="about-card animate-in">
+      <h2>Who Is GenomicX For?</h2>
+      <div class="audience-grid">
+        <div class="audience-item">
+          <h4>Researchers</h4>
+          <p>Run quick analyses without provisioning servers or installing dependencies. Get results in your browser, export for publications.</p>
+        </div>
+        <div class="audience-item">
+          <h4>Students</h4>
+          <p>Learn bioinformatics without battling conda environments. Hands-on with real tools, from any computer, on day one.</p>
+        </div>
+        <div class="audience-item">
+          <h4>Clinicians</h4>
+          <p>Screen genomic data without sending it to external servers. Privacy-compliant analysis at the point of need.</p>
+        </div>
+        <div class="audience-item">
+          <h4>Citizen Scientists</h4>
+          <p>Explore microbial genomics with professional-grade tools. No institutional access required.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Contributing -->
+    <div class="about-card animate-in">
+      <h2>How to Contribute</h2>
+      <p>
+        GenomicX is a community effort. Whether you write code, test tools, write documentation, or just share the project with others, you're helping make bioinformatics more accessible.
+      </p>
+      <div class="contribute-list">
+        <div class="contribute-step">
+          <strong>Report bugs or request features.</strong> Open an issue on the relevant tool's GitHub repository. Every report helps.
+        </div>
+        <div class="contribute-step">
+          <strong>Contribute code.</strong> Fork a repo, make your changes, and open a pull request. We welcome improvements of all sizes.
+        </div>
+        <div class="contribute-step">
+          <strong>Port a tool to WebAssembly.</strong> Have a favourite command-line bioinformatics tool? Help us bring it to the browser.
+        </div>
+        <div class="contribute-step">
+          <strong>Improve documentation.</strong> Clear docs lower the barrier to entry. Help us write tutorials, guides, or improve existing docs.
+        </div>
+        <div class="contribute-step">
+          <strong>Spread the word.</strong> Share GenomicX with your lab, your students, or on social media. Visibility helps the project grow.
+        </div>
+      </div>
+      <div style="margin-top: 1.5rem;">
+        <a href="https://github.com/genomicx" target="_blank" rel="noopener" class="btn btn-primary">
+          <svg viewBox="0 0 24 24" fill="currentColor" style="width:18px;height:18px;"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+          Get Started on GitHub
+        </a>
+      </div>
+    </div>
+
+    <!-- About the founder -->
+    <div class="about-card animate-in">
+      <h2>About the Founder</h2>
+      <p>
+        GenomicX was started by <strong>Nabil-Fareed Alikhan</strong>, a bioinformatics researcher at the Centre for Genomic Pathogen Surveillance, University of Oxford. His work focuses on microbial genomics, developing open-source tools for prokaryote genome analysis and visualization.
+      </p>
+      <p>
+        He is the co-creator of <a href="https://github.com/happykhan/BRIG" target="_blank" rel="noopener">BRIG</a> (BLAST Ring Image Generator), published in BMC Genomics, and co-hosts the <a href="https://www.microbinfie.com/" target="_blank" rel="noopener">MicroBinfie Podcast</a>. GenomicX grew from a simple conviction: the tools researchers build should be usable by everyone, not just people with the same computing setup.
+      </p>
       <div class="about-links">
         <a href="https://www.happykhan.com/" target="_blank" rel="noopener" class="about-link">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
           Website
         </a>
-        <a href="https://github.com/genomicx" target="_blank" rel="noopener" class="about-link">
+        <a href="https://github.com/happykhan" target="_blank" rel="noopener" class="about-link">
           <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
           GitHub
         </a>
@@ -93,66 +194,21 @@
       </div>
     </div>
 
-    <div class="about-card animate-in">
-      <h2>Areas of Expertise</h2>
-      <div class="expertise-grid">
-        <div class="expertise-item">
-          <div class="dot"></div>
-          <div>
-            <h4>Microbial Genomics</h4>
-            <p>Bacterial genome analysis, pathogen surveillance, and phylogenetics</p>
-          </div>
-        </div>
-        <div class="expertise-item">
-          <div class="dot"></div>
-          <div>
-            <h4>Bioinformatics Tools</h4>
-            <p>Open-source software for sequence analysis and genome visualization</p>
-          </div>
-        </div>
-        <div class="expertise-item">
-          <div class="dot"></div>
-          <div>
-            <h4>WebAssembly</h4>
-            <p>Compiling C/C++ bioinformatics tools to run in the browser</p>
-          </div>
-        </div>
-        <div class="expertise-item">
-          <div class="dot"></div>
-          <div>
-            <h4>Open Science</h4>
-            <p>Reproducible research, open data, and accessible tooling</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="about-card animate-in">
-      <h2>Contributing</h2>
-      <p>
-        All Genomicx tools are open source and welcome contributions. If you find a bug, want a new feature, or would like to add support for a new organism or analysis method, open an issue or pull request on the relevant GitHub repository.
-      </p>
-      <p>
-        Have an idea for a new browser-based bioinformatics tool? <a href="https://github.com/genomicx" target="_blank" rel="noopener">Get in touch on GitHub</a>.
-      </p>
-    </div>
-
   </main>
 
   <!-- Footer -->
   <footer class="footer">
     <div class="footer-inner">
-      <span>Genomicx &mdash; by <a href="https://www.happykhan.com/" target="_blank" rel="noopener">Nabil-Fareed Alikhan</a></span>
+      <span>GenomicX &mdash; open-source bioinformatics for the browser</span>
       <ul class="footer-links">
         <li><a href="https://github.com/genomicx" target="_blank" rel="noopener">GitHub</a></li>
-        <li><a href="https://mstdn.science/@happykhan" target="_blank" rel="noopener">Mastodon</a></li>
-        <li><a href="https://www.linkedin.com/in/nabil-fareed-alikhan/" target="_blank" rel="noopener">LinkedIn</a></li>
+        <li><a href="about.html">Mission</a></li>
+        <li><a href="https://www.happykhan.com/" target="_blank" rel="noopener">Nabil-Fareed Alikhan</a></li>
       </ul>
     </div>
   </footer>
 
   <script>
-    // Mobile nav toggle
     document.addEventListener('DOMContentLoaded', () => {
       const toggle = document.querySelector('.nav-toggle');
       const links = document.querySelector('.nav-links');
