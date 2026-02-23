@@ -182,5 +182,26 @@
       "webDev": "not-started",
       "benchmarking": "not-started"
     }
+  },
+{
+  "id": "Consensusx",
+  "name": "Consensusx",
+  "tagline": "Consensus sequence generation",
+  "description": "Convert sequenced reads into high-quality consensus sequences for downstream analyses",
+  "icon": "wrench",
+  "tech": ["WebAssembly", "TypeScript"],
+  "features": [
+    "Read preprocessing (quality trimming, adapter removal)",
+    "Reference-guided  consensus calling"
+  ],
+  "demoUrl": "",
+  "sourceUrl": "",
+  "color": "#14B8A6",
+  "status": {
+    "scoping": "in-progress",
+    "pipeline": "not-started",
+    "webDev": "not-started",
+    "benchmarking": "not-started"
   }
+}
 ]
