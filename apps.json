@@ -14,7 +14,7 @@
     ],
     "demoUrl": "https://brigx-eight.vercel.app",
     "sourceUrl": "https://github.com/genomicx/brigx",
-    "color": "#6366f1"
+    "color": "#14B8A6"
   },
   {
     "id": "mlstx",
@@ -31,7 +31,7 @@
     ],
     "demoUrl": "https://mlstx.vercel.app",
     "sourceUrl": "https://github.com/genomicx/mlstx",
-    "color": "#06b6d4"
+    "color": "#14B8A6"
   },
   {
     "id": "mashtreewebx",
@@ -48,6 +48,6 @@
     ],
     "demoUrl": "https://mashtreewebx.vercel.app",
     "sourceUrl": "https://github.com/genomicx/mashtreewebx",
-    "color": "#10b981"
+    "color": "#14B8A6"
   }
 ]
