@@ -546,6 +546,86 @@ GenomicX.buildThemeToggle() // Returns HTML for the 3-option toggle
     </div>
   </section>
 
+  <!-- ===== COMPONENT PATTERNS ===== -->
+  <div class="gx-divider"><hr></div>
+
+  <section class="gx-section">
+    <div class="gx-section-header">
+      <h2>Component Patterns</h2>
+      <p>Documented patterns for the three core layout components: nav bar, page title, and footer.</p>
+    </div>
+
+    <!-- Nav Bar Pattern -->
+    <h3 class="gx-text-bright gx-mb-6" style="font-size:1.1rem; font-weight:700;">Nav Bar</h3>
+    <p class="gx-text-muted gx-text-sm gx-mb-4">The nav bar is sticky, uses a blurred backdrop, and includes the GenomicX logo, page links (including Roadmap), a GitHub link, and a theme toggle. On mobile it collapses behind a hamburger menu.</p>
+    <div class="gx-code-block gx-mb-8" style="font-size:0.7rem; line-height:1.7;">&lt;nav class="gx-nav"&gt;
+  &lt;div class="gx-nav-inner"&gt;
+    &lt;a href="index.html" class="gx-nav-logo"&gt;
+      &lt;svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round"
+        style="color: var(--gx-accent)"&gt;
+        &lt;path d="M2 15c6.667-6 13.333 0 20-6"/&gt;
+        &lt;path d="M9 22c1.798-1.998 2.518-3.995 2.807-5.993"/&gt;
+        &lt;path d="M15 2c-1.798 1.998-2.518 3.995-2.807 5.993"/&gt;
+        &lt;path d="M17 6l-2.5 2.5"/&gt;&lt;path d="M14 8l-1 1"/&gt;
+        &lt;path d="M7 18l2.5-2.5"/&gt;&lt;path d="M3.5 14.5l.5-.5"/&gt;
+      &lt;/svg&gt;
+      &lt;span&gt;GenomicX&lt;/span&gt;
+    &lt;/a&gt;
+
+    &lt;button class="gx-nav-toggle" aria-label="Toggle navigation"
+      aria-expanded="false"&gt;
+      &lt;!-- hamburger icon --&gt;
+    &lt;/button&gt;
+
+    &lt;ul class="gx-nav-links"&gt;
+      &lt;li&gt;&lt;a href="index.html" class="active"&gt;Home&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="index.html#tools"&gt;Tools&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="roadmap.html"&gt;Roadmap&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="about.html"&gt;Mission&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="https://github.com/genomicx" class="gx-nav-github"&gt;GitHub&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;button id="theme-toggle" class="theme-toggle-btn"&gt;...&lt;/button&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+&lt;/nav&gt;</div>
+
+    <!-- Page Title Pattern -->
+    <h3 class="gx-text-bright gx-mb-6" style="font-size:1.1rem; font-weight:700;">Page Title / Hero</h3>
+    <p class="gx-text-muted gx-text-sm gx-mb-4">Every page uses a hero or page-title section with a main heading (<code class="gx-code">.accent-text</code> for the highlighted phrase) and an optional subtitle. Use <code class="gx-code">.gx-hero</code> for landing pages or the scoped hero class for sub-pages.</p>
+    <div class="gx-code-block gx-mb-8" style="font-size:0.7rem; line-height:1.7;">&lt;!-- Landing page hero --&gt;
+&lt;header class="gx-hero"&gt;
+  &lt;div class="gx-hero-badge"&gt;
+    &lt;!-- icon SVG --&gt; Open source &amp;middot; Privacy-first
+  &lt;/div&gt;
+  &lt;h1&gt;Bioinformatics belongs &lt;span class="gx-accent"&gt;in the browser.&lt;/span&gt;&lt;/h1&gt;
+  &lt;p&gt;Subtitle text goes here.&lt;/p&gt;
+  &lt;div class="gx-hero-actions"&gt;
+    &lt;a href="#" class="gx-btn gx-btn-primary"&gt;Primary CTA&lt;/a&gt;
+    &lt;a href="#" class="gx-btn gx-btn-secondary"&gt;Secondary CTA&lt;/a&gt;
+  &lt;/div&gt;
+&lt;/header&gt;
+
+&lt;!-- Sub-page hero (about, roadmap, etc.) --&gt;
+&lt;header class="about-hero"&gt;
+  &lt;h1&gt;Page Title &lt;span class="accent-text"&gt;highlighted part&lt;/span&gt;&lt;/h1&gt;
+  &lt;p&gt;Brief description of this page.&lt;/p&gt;
+&lt;/header&gt;</div>
+
+    <!-- Footer Pattern -->
+    <h3 class="gx-text-bright gx-mb-6" style="font-size:1.1rem; font-weight:700;">Footer</h3>
+    <p class="gx-text-muted gx-text-sm gx-mb-4">The footer sits at the bottom via <code class="gx-code">margin-top: auto</code> and contains the GenomicX tagline plus links to GitHub, the Mission page, and the founder's website.</p>
+    <div class="gx-code-block gx-mb-8" style="font-size:0.7rem; line-height:1.7;">&lt;footer class="gx-footer"&gt;
+  &lt;div class="gx-footer-inner"&gt;
+    &lt;span&gt;GenomicX &amp;mdash; open-source bioinformatics for the browser&lt;/span&gt;
+    &lt;ul class="gx-footer-links"&gt;
+      &lt;li&gt;&lt;a href="https://github.com/genomicx"&gt;GitHub&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="about.html"&gt;Mission&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="https://www.happykhan.com/"&gt;Nabil-Fareed Alikhan&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+&lt;/footer&gt;</div>
+  </section>
+
   <!-- ===== APP LAYOUT TEMPLATE ===== -->
   <div class="gx-divider"><hr></div>
 
@@ -568,6 +648,13 @@ GenomicX.buildThemeToggle() // Returns HTML for the 3-option toggle
     &amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"&gt;
   &lt;link rel="stylesheet" href="css/genomicx.css"&gt;
   &lt;link rel="icon" href="images/favicon.svg" type="image/svg+xml"&gt;
+  &lt;script&gt;
+    // Prevent FOUC: apply saved theme before first paint
+    (function() {
+      var t = localStorage.getItem('gx-theme') || 'dark';
+      document.documentElement.setAttribute('data-theme', t);
+    })();
+  &lt;/script&gt;
 &lt;/head&gt;
 &lt;body&gt;
   &lt;!-- Nav (use GenomicX.buildNav() or copy from template) --&gt;
