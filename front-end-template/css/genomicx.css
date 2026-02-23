@@ -18,66 +18,99 @@
    ============================================================================= */
 
 :root {
-  /* --- Colors: Background --- */
-  --gx-bg:          #0F172A;
-  --gx-bg-alt:      #1E293B;
-  --gx-bg-elevated: #253349;
-
-  /* --- Colors: Text --- */
-  --gx-text:        #E2E8F0;
-  --gx-text-muted:  #94A3B8;
-  --gx-text-bright: #F1F5F9;
-
-  /* --- Colors: Borders --- */
-  --gx-border:      #334155;
-
-  /* --- Colors: Accent (teal) --- */
+  /* --- Shared (theme-independent) --- */
   --gx-accent:       #14B8A6;
   --gx-accent-hover: #2DD4BF;
-  --gx-accent-dim:   rgba(20, 184, 166, 0.1);
-  --gx-accent-15:    rgba(20, 184, 166, 0.15);
+  --gx-indigo:       #6366F1;
+  --gx-success:      #14B8A6;
+  --gx-warning:      #F59E0B;
+  --gx-error:        #EF4444;
 
-  /* --- Colors: Indigo (secondary accent) --- */
-  --gx-indigo:     #6366F1;
-  --gx-indigo-dim: rgba(99, 102, 241, 0.1);
+  --gx-radius:       8px;
+  --gx-radius-lg:    12px;
+  --gx-radius-sm:    4px;
+  --gx-radius-pill:  999px;
+  --gx-transition:   0.2s ease;
+  --gx-max-width:    1080px;
+  --gx-nav-height:   60px;
 
-  /* --- Colors: Status --- */
-  --gx-success:    #14B8A6;
-  --gx-warning:    #F59E0B;
-  --gx-error:      #EF4444;
-
-  /* --- Radii --- */
-  --gx-radius:     8px;
-  --gx-radius-lg:  12px;
-  --gx-radius-sm:  4px;
-  --gx-radius-pill: 999px;
-
-  /* --- Transition --- */
-  --gx-transition: 0.2s ease;
-
-  /* --- Layout --- */
-  --gx-max-width:  1080px;
-
-  /* --- Typography --- */
   --gx-font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
   --gx-font-mono: 'JetBrains Mono', 'Fira Code', monospace;
 
-  /* --- Spacing scale (used as reference) --- */
-  --gx-space-1:  0.25rem;  /*  4px */
-  --gx-space-2:  0.5rem;   /*  8px */
-  --gx-space-3:  0.75rem;  /* 12px */
-  --gx-space-4:  1rem;     /* 16px */
-  --gx-space-5:  1.25rem;  /* 20px */
-  --gx-space-6:  1.5rem;   /* 24px */
-  --gx-space-8:  2rem;     /* 32px */
-  --gx-space-10: 2.5rem;   /* 40px */
-  --gx-space-12: 3rem;     /* 48px */
-  --gx-space-16: 4rem;     /* 64px */
-  --gx-space-20: 5rem;     /* 80px */
+  --gx-space-1:  0.25rem;
+  --gx-space-2:  0.5rem;
+  --gx-space-3:  0.75rem;
+  --gx-space-4:  1rem;
+  --gx-space-5:  1.25rem;
+  --gx-space-6:  1.5rem;
+  --gx-space-8:  2rem;
+  --gx-space-10: 2.5rem;
+  --gx-space-12: 3rem;
+  --gx-space-16: 4rem;
+  --gx-space-20: 5rem;
+}
 
-  /* --- Nav height --- */
-  --gx-nav-height: 60px;
+/* --- DARK THEME (default) --- */
+:root,
+[data-theme="dark"] {
+  --gx-bg:            #0F172A;
+  --gx-bg-alt:        #1E293B;
+  --gx-bg-elevated:   #253349;
+  --gx-text:          #E2E8F0;
+  --gx-text-muted:    #94A3B8;
+  --gx-text-bright:   #F1F5F9;
+  --gx-border:        #334155;
+  --gx-accent-dim:    rgba(20, 184, 166, 0.1);
+  --gx-accent-15:     rgba(20, 184, 166, 0.15);
+  --gx-indigo-dim:    rgba(99, 102, 241, 0.1);
+  --gx-nav-bg:        rgba(15, 23, 42, 0.9);
+  --gx-code-bg:       #0F172A;
+  --gx-shadow:        0 1px 3px rgba(0, 0, 0, 0.3);
+  --gx-logo-stroke:   #14B8A6;
+  color-scheme: dark;
+}
 
+/* --- LIGHT THEME --- */
+[data-theme="light"] {
+  --gx-bg:            #FFFFFF;
+  --gx-bg-alt:        #F8FAFC;
+  --gx-bg-elevated:   #F1F5F9;
+  --gx-text:          #334155;
+  --gx-text-muted:    #64748B;
+  --gx-text-bright:   #0F172A;
+  --gx-border:        #E2E8F0;
+  --gx-accent-dim:    rgba(20, 184, 166, 0.08);
+  --gx-accent-15:     rgba(20, 184, 166, 0.12);
+  --gx-indigo-dim:    rgba(99, 102, 241, 0.08);
+  --gx-nav-bg:        rgba(255, 255, 255, 0.9);
+  --gx-code-bg:       #F1F5F9;
+  --gx-shadow:        0 1px 3px rgba(0, 0, 0, 0.08);
+  --gx-logo-stroke:   #0D9488;
+  color-scheme: light;
+}
+
+/* --- System preference auto-detection --- */
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme]) {
+    --gx-bg:            #FFFFFF;
+    --gx-bg-alt:        #F8FAFC;
+    --gx-bg-elevated:   #F1F5F9;
+    --gx-text:          #334155;
+    --gx-text-muted:    #64748B;
+    --gx-text-bright:   #0F172A;
+    --gx-border:        #E2E8F0;
+    --gx-accent-dim:    rgba(20, 184, 166, 0.08);
+    --gx-accent-15:     rgba(20, 184, 166, 0.12);
+    --gx-indigo-dim:    rgba(99, 102, 241, 0.08);
+    --gx-nav-bg:        rgba(255, 255, 255, 0.9);
+    --gx-code-bg:       #F1F5F9;
+    --gx-shadow:        0 1px 3px rgba(0, 0, 0, 0.08);
+    --gx-logo-stroke:   #0D9488;
+    color-scheme: light;
+  }
+}
+
+:root {
   /* --- Backwards-compatible aliases (match genomicx.github.io) --- */
   --bg:          var(--gx-bg);
   --bg-alt:      var(--gx-bg-alt);
@@ -153,7 +186,7 @@ img {
   position: sticky;
   top: 0;
   z-index: 100;
-  background: rgba(15, 23, 42, 0.9);
+  background: var(--gx-nav-bg);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--gx-border);
@@ -1006,7 +1039,7 @@ img {
 .gx-code {
   font-family: var(--gx-font-mono);
   font-size: 0.8rem;
-  background: var(--gx-bg);
+  background: var(--gx-code-bg);
   padding: 0.15rem 0.4rem;
   border-radius: 3px;
   color: var(--gx-accent);
@@ -1015,7 +1048,7 @@ img {
 .gx-code-block {
   font-family: var(--gx-font-mono);
   font-size: 0.8rem;
-  background: var(--gx-bg);
+  background: var(--gx-code-bg);
   border: 1px solid var(--gx-border);
   border-radius: var(--gx-radius);
   padding: 1rem 1.25rem;
@@ -1081,7 +1114,109 @@ img {
 
 
 /* =============================================================================
-   22. RESPONSIVE
+   22. THEME TOGGLE
+   ============================================================================= */
+
+.gx-theme-toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: none;
+  border: 1px solid var(--gx-border);
+  border-radius: var(--gx-radius-pill);
+  padding: 0.25rem;
+  cursor: pointer;
+  color: var(--gx-text-muted);
+  transition: border-color var(--gx-transition);
+}
+
+.gx-theme-toggle:hover {
+  border-color: var(--gx-accent);
+}
+
+.gx-theme-toggle-option {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: none;
+  background: none;
+  color: var(--gx-text-muted);
+  cursor: pointer;
+  transition: all var(--gx-transition);
+}
+
+.gx-theme-toggle-option svg {
+  width: 14px;
+  height: 14px;
+}
+
+.gx-theme-toggle-option.active {
+  background: var(--gx-accent);
+  color: var(--gx-bg);
+}
+
+/* Simple pill toggle (alternative) */
+.gx-theme-switch {
+  position: relative;
+  width: 48px;
+  height: 26px;
+  background: var(--gx-border);
+  border-radius: 13px;
+  border: none;
+  cursor: pointer;
+  transition: background var(--gx-transition);
+  padding: 0;
+}
+
+.gx-theme-switch::after {
+  content: '';
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--gx-text-bright);
+  transition: transform var(--gx-transition);
+}
+
+[data-theme="light"] .gx-theme-switch::after {
+  transform: translateX(22px);
+}
+
+[data-theme="light"] .gx-theme-switch {
+  background: var(--gx-accent);
+}
+
+/* Smooth transition when switching themes */
+body {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.gx-nav,
+.gx-card,
+.gx-app-card,
+.gx-panel,
+.gx-footer,
+.gx-feature-item,
+.gx-alert,
+.gx-input,
+.gx-select,
+.gx-textarea,
+.gx-code,
+.gx-code-block,
+.gx-tag,
+.gx-table th,
+.gx-table td {
+  transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+}
+
+
+/* =============================================================================
+   23. RESPONSIVE
    ============================================================================= */
 
 @media (max-width: 768px) {

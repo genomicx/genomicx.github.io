@@ -3,45 +3,71 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>GenomicX Design System</title>
+  <title>GenomicX Design System - Component Reference</title>
+  <meta name="description" content="GenomicX front-end template: design tokens, components, and layout reference for all GenomicX applications.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/genomicx.css">
   <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="images/favicon-32x32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
 </head>
 <body>
 
-  <!-- NAV -->
+  <!-- ===== NAVIGATION ===== -->
   <nav class="gx-nav">
     <div class="gx-nav-inner">
       <a href="index.html" class="gx-nav-logo">
-        <svg viewBox="0 0 24 24" fill="none" stroke="#14B8A6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 15c6.667-6 13.333 0 20-6"/><path d="M9 22c1.798-1.998 2.518-3.995 2.807-5.993"/><path d="M15 2c-1.798 1.998-2.518 3.995-2.807 5.993"/><path d="M17 6l-2.5 2.5"/><path d="M14 8l-1 1"/><path d="M7 18l2.5-2.5"/><path d="M3.5 14.5l.5-.5"/></svg>
+        <svg viewBox="0 0 24 24" fill="none" stroke="var(--gx-logo-stroke, #14B8A6)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M2 15c6.667-6 13.333 0 20-6"/>
+          <path d="M9 22c1.798-1.998 2.518-3.995 2.807-5.993"/>
+          <path d="M15 2c-1.798 1.998-2.518 3.995-2.807 5.993"/>
+          <path d="M17 6l-2.5 2.5"/><path d="M14 8l-1 1"/>
+          <path d="M7 18l2.5-2.5"/><path d="M3.5 14.5l.5-.5"/>
+        </svg>
         <span>GenomicX</span>
       </a>
+
       <button class="gx-nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
       </button>
+
       <ul class="gx-nav-links">
         <li><a href="#colors">Colors</a></li>
+        <li><a href="#typography">Typography</a></li>
         <li><a href="#components">Components</a></li>
-        <li><a href="#forms">Forms</a></li>
-        <li><a href="https://github.com/genomicx" target="_blank" rel="noopener" class="gx-nav-github">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-          GitHub
-        </a></li>
+        <li>
+          <a href="https://github.com/genomicx" target="_blank" rel="noopener" class="gx-nav-github">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+            GitHub
+          </a>
+        </li>
+        <li>
+          <div class="gx-theme-toggle" role="radiogroup" aria-label="Theme">
+            <button class="gx-theme-toggle-option active" data-theme="dark" aria-label="Dark" title="Dark">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+            </button>
+            <button class="gx-theme-toggle-option" data-theme="system" aria-label="System" title="System">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+            </button>
+            <button class="gx-theme-toggle-option" data-theme="light" aria-label="Light" title="Light">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+            </button>
+          </div>
+        </li>
       </ul>
     </div>
   </nav>
 
-  <!-- HERO -->
+  <!-- ===== HERO ===== -->
   <header class="gx-hero">
     <div class="gx-hero-badge">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 16 4-4-4-4"/><path d="m6 8-4 4 4 4"/><path d="m14.5 4-5 16"/></svg>
       Front-End Template &middot; Design System
     </div>
     <h1>GenomicX <span class="gx-accent">Component Reference</span></h1>
-    <p>Design tokens, components, and patterns for all GenomicX apps. Use this to restyle BRIGx, MLSTx, MashtreeWebx, and future tools.</p>
+    <p>All the design tokens, components, and patterns used across GenomicX apps. Use this template to maintain visual consistency when building or restyling BRIGx, MLSTx, MashtreeWebx, and future tools.</p>
     <div class="gx-hero-actions">
       <a href="#components" class="gx-btn gx-btn-primary">View Components</a>
       <a href="https://github.com/genomicx/front-end-template" target="_blank" rel="noopener" class="gx-btn gx-btn-secondary">
@@ -51,118 +77,318 @@
     </div>
   </header>
 
-  <!-- COLORS -->
+  <!-- ===== COLORS ===== -->
   <div class="gx-divider"><hr></div>
+
   <section id="colors" class="gx-section">
     <div class="gx-section-header">
       <h2>Color Palette</h2>
-      <p>CSS custom properties on <code class="gx-code">:root</code></p>
+      <p>Design tokens defined as CSS custom properties on <code class="gx-code">:root</code>.</p>
     </div>
-    <div class="gx-grid-3" style="margin-bottom:2rem;">
-      <div style="background:var(--gx-bg);border:1px solid var(--gx-border);border-radius:var(--gx-radius);padding:1.25rem;"><div class="gx-text-bright" style="font-size:0.85rem;font-weight:600;">--gx-bg</div><div class="gx-text-mono gx-text-muted" style="font-size:0.75rem;">#0F172A</div></div>
-      <div style="background:var(--gx-bg-alt);border:1px solid var(--gx-border);border-radius:var(--gx-radius);padding:1.25rem;"><div class="gx-text-bright" style="font-size:0.85rem;font-weight:600;">--gx-bg-alt</div><div class="gx-text-mono gx-text-muted" style="font-size:0.75rem;">#1E293B</div></div>
-      <div style="background:var(--gx-bg-elevated);border:1px solid var(--gx-border);border-radius:var(--gx-radius);padding:1.25rem;"><div class="gx-text-bright" style="font-size:0.85rem;font-weight:600;">--gx-bg-elevated</div><div class="gx-text-mono gx-text-muted" style="font-size:0.75rem;">#253349</div></div>
-      <div style="background:var(--gx-accent);border-radius:var(--gx-radius);padding:1.25rem;"><div style="color:var(--gx-bg);font-size:0.85rem;font-weight:600;">--gx-accent</div><div class="gx-text-mono" style="font-size:0.75rem;color:var(--gx-bg);">#14B8A6</div></div>
-      <div style="background:var(--gx-accent-hover);border-radius:var(--gx-radius);padding:1.25rem;"><div style="color:var(--gx-bg);font-size:0.85rem;font-weight:600;">--gx-accent-hover</div><div class="gx-text-mono" style="font-size:0.75rem;color:var(--gx-bg);">#2DD4BF</div></div>
-      <div style="background:var(--gx-indigo);border-radius:var(--gx-radius);padding:1.25rem;"><div style="color:#fff;font-size:0.85rem;font-weight:600;">--gx-indigo</div><div class="gx-text-mono" style="font-size:0.75rem;color:rgba(255,255,255,0.8);">#6366F1</div></div>
+
+    <h3 class="gx-text-bright gx-mb-4" style="font-size:1rem;">Backgrounds</h3>
+    <div style="display:grid; grid-template-columns: repeat(auto-fill, minmax(200px,1fr)); gap:0.75rem; margin-bottom:2.5rem;">
+      <div style="background:var(--gx-bg); border:1px solid var(--gx-border); border-radius:var(--gx-radius); padding:1.25rem;">
+        <div class="gx-text-bright" style="font-size:0.85rem; font-weight:600;">--gx-bg</div>
+        <div class="gx-text-mono gx-text-muted" style="font-size:0.75rem;">#0F172A</div>
+      </div>
+      <div style="background:var(--gx-bg-alt); border:1px solid var(--gx-border); border-radius:var(--gx-radius); padding:1.25rem;">
+        <div class="gx-text-bright" style="font-size:0.85rem; font-weight:600;">--gx-bg-alt</div>
+        <div class="gx-text-mono gx-text-muted" style="font-size:0.75rem;">#1E293B</div>
+      </div>
+      <div style="background:var(--gx-bg-elevated); border:1px solid var(--gx-border); border-radius:var(--gx-radius); padding:1.25rem;">
+        <div class="gx-text-bright" style="font-size:0.85rem; font-weight:600;">--gx-bg-elevated</div>
+        <div class="gx-text-mono gx-text-muted" style="font-size:0.75rem;">#253349</div>
+      </div>
     </div>
-    <div class="gx-panel">
-      <div class="gx-flex gx-gap-8" style="flex-wrap:wrap;">
-        <div><span class="gx-text-bright" style="font-weight:600;">--gx-text-bright</span> <span class="gx-text-mono gx-text-xs">#F1F5F9</span></div>
-        <div><span style="color:var(--gx-text);">--gx-text</span> <span class="gx-text-mono gx-text-xs">#E2E8F0</span></div>
-        <div><span class="gx-text-muted">--gx-text-muted</span> <span class="gx-text-mono gx-text-xs">#94A3B8</span></div>
-        <div><span class="gx-text-muted">--gx-border</span> <span class="gx-text-mono gx-text-xs">#334155</span></div>
+
+    <h3 class="gx-text-bright gx-mb-4" style="font-size:1rem;">Text</h3>
+    <div style="display:grid; grid-template-columns: repeat(auto-fill, minmax(200px,1fr)); gap:0.75rem; margin-bottom:2.5rem;">
+      <div style="background:var(--gx-bg-alt); border:1px solid var(--gx-border); border-radius:var(--gx-radius); padding:1.25rem;">
+        <div style="color:var(--gx-text-bright); font-size:0.85rem; font-weight:600;">--gx-text-bright</div>
+        <div class="gx-text-mono gx-text-muted" style="font-size:0.75rem;">#F1F5F9</div>
+      </div>
+      <div style="background:var(--gx-bg-alt); border:1px solid var(--gx-border); border-radius:var(--gx-radius); padding:1.25rem;">
+        <div style="color:var(--gx-text); font-size:0.85rem; font-weight:600;">--gx-text</div>
+        <div class="gx-text-mono gx-text-muted" style="font-size:0.75rem;">#E2E8F0</div>
+      </div>
+      <div style="background:var(--gx-bg-alt); border:1px solid var(--gx-border); border-radius:var(--gx-radius); padding:1.25rem;">
+        <div style="color:var(--gx-text-muted); font-size:0.85rem; font-weight:600;">--gx-text-muted</div>
+        <div class="gx-text-mono gx-text-muted" style="font-size:0.75rem;">#94A3B8</div>
+      </div>
+    </div>
+
+    <h3 class="gx-text-bright gx-mb-4" style="font-size:1rem;">Accent &amp; Brand</h3>
+    <div style="display:grid; grid-template-columns: repeat(auto-fill, minmax(200px,1fr)); gap:0.75rem; margin-bottom:2.5rem;">
+      <div style="background:var(--gx-accent); border-radius:var(--gx-radius); padding:1.25rem;">
+        <div style="color:var(--gx-bg); font-size:0.85rem; font-weight:600;">--gx-accent</div>
+        <div class="gx-text-mono" style="font-size:0.75rem; color:var(--gx-bg);">#14B8A6</div>
+      </div>
+      <div style="background:var(--gx-accent-hover); border-radius:var(--gx-radius); padding:1.25rem;">
+        <div style="color:var(--gx-bg); font-size:0.85rem; font-weight:600;">--gx-accent-hover</div>
+        <div class="gx-text-mono" style="font-size:0.75rem; color:var(--gx-bg);">#2DD4BF</div>
+      </div>
+      <div style="background:var(--gx-indigo); border-radius:var(--gx-radius); padding:1.25rem;">
+        <div style="color:#fff; font-size:0.85rem; font-weight:600;">--gx-indigo</div>
+        <div class="gx-text-mono" style="font-size:0.75rem; color:rgba(255,255,255,0.8);">#6366F1</div>
+      </div>
+      <div style="background:var(--gx-bg-alt); border:1px solid var(--gx-border); border-radius:var(--gx-radius); padding:1.25rem;">
+        <div style="color:var(--gx-text-bright); font-size:0.85rem; font-weight:600;">--gx-border</div>
+        <div class="gx-text-mono gx-text-muted" style="font-size:0.75rem;">#334155</div>
       </div>
     </div>
   </section>
 
-  <!-- COMPONENTS -->
+  <!-- ===== TYPOGRAPHY ===== -->
   <div class="gx-divider"><hr></div>
+
+  <section id="typography" class="gx-section">
+    <div class="gx-section-header">
+      <h2>Typography</h2>
+      <p>Inter for UI text, JetBrains Mono for code and technical labels.</p>
+    </div>
+
+    <div class="gx-panel gx-mb-8">
+      <h1 style="font-size:clamp(2.5rem,5vw,3.75rem); font-weight:800; letter-spacing:-0.035em; color:var(--gx-text-bright); margin-bottom:1rem;">Hero Heading h1</h1>
+      <h2 style="font-size:1.75rem; font-weight:700; letter-spacing:-0.025em; color:var(--gx-text-bright); margin-bottom:0.75rem;">Section Heading h2</h2>
+      <h3 style="font-size:1.05rem; font-weight:700; color:var(--gx-text-bright); margin-bottom:0.5rem;">Card Heading h3</h3>
+      <p style="color:var(--gx-text-muted); line-height:1.75; margin-bottom:0.5rem;">Body text: GenomicX compiles established, peer-reviewed bioinformatics tools into WebAssembly modules that run entirely in your browser.</p>
+      <p style="font-size:0.85rem; color:var(--gx-text-muted); line-height:1.6; margin-bottom:0.5rem;">Small text: Used for descriptions, feature lists, and secondary content.</p>
+      <p style="font-family:var(--gx-font-mono); font-size:0.8rem; color:var(--gx-accent);">Monospace: JetBrains Mono for code, tech tags, and identifiers.</p>
+    </div>
+
+    <div class="gx-flex gx-gap-4" style="flex-wrap:wrap;">
+      <div>
+        <div class="gx-text-xs gx-text-muted gx-mb-4" style="text-transform:uppercase; letter-spacing:0.05em; font-weight:600;">Sans (Inter)</div>
+        <div class="gx-code-block" style="min-width:280px;">font-family: var(--gx-font-sans);</div>
+      </div>
+      <div>
+        <div class="gx-text-xs gx-text-muted gx-mb-4" style="text-transform:uppercase; letter-spacing:0.05em; font-weight:600;">Mono (JetBrains Mono)</div>
+        <div class="gx-code-block" style="min-width:280px;">font-family: var(--gx-font-mono);</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== COMPONENTS ===== -->
+  <div class="gx-divider"><hr></div>
+
   <section id="components" class="gx-section">
     <div class="gx-section-header">
       <h2>Components</h2>
-      <p>Reusable UI building blocks</p>
+      <p>Reusable UI building blocks for GenomicX applications.</p>
     </div>
 
     <!-- Buttons -->
-    <h3 class="gx-text-bright gx-mb-6" style="font-size:1.1rem;">Buttons</h3>
-    <div class="gx-flex gx-gap-4 gx-mb-8" style="flex-wrap:wrap;align-items:center;">
-      <button class="gx-btn gx-btn-primary">Primary</button>
-      <button class="gx-btn gx-btn-secondary">Secondary</button>
+    <h3 class="gx-text-bright gx-mb-6" style="font-size:1.1rem; font-weight:700;">Buttons</h3>
+    <div class="gx-flex gx-gap-4 gx-mb-8" style="flex-wrap:wrap; align-items:center;">
+      <button class="gx-btn gx-btn-primary">Primary Button</button>
+      <button class="gx-btn gx-btn-secondary">Secondary Button</button>
       <button class="gx-btn gx-btn-primary gx-btn-sm">Small Primary</button>
       <button class="gx-btn gx-btn-secondary gx-btn-sm">Small Secondary</button>
     </div>
+    <div class="gx-code-block gx-mb-8" style="font-size:0.75rem;">&lt;button class="gx-btn gx-btn-primary"&gt;Primary&lt;/button&gt;
+&lt;button class="gx-btn gx-btn-secondary"&gt;Secondary&lt;/button&gt;
+&lt;button class="gx-btn gx-btn-primary gx-btn-sm"&gt;Small&lt;/button&gt;</div>
 
     <!-- Badges & Tags -->
-    <h3 class="gx-text-bright gx-mb-6" style="font-size:1.1rem;">Badges &amp; Tags</h3>
-    <div class="gx-flex gx-gap-4 gx-mb-4" style="flex-wrap:wrap;"><span class="gx-badge gx-badge-success">Shipped</span><span class="gx-badge gx-badge-active">In Progress</span><span class="gx-badge gx-badge-muted">Planned</span></div>
-    <div class="gx-flex gx-gap-2 gx-mb-8" style="flex-wrap:wrap;"><span class="gx-tag">WebAssembly</span><span class="gx-tag">TypeScript</span><span class="gx-tag">Vite</span><span class="gx-tag">Web Workers</span></div>
-
-    <!-- Alerts -->
-    <h3 class="gx-text-bright gx-mb-6" style="font-size:1.1rem;">Alerts</h3>
-    <div class="gx-flex gx-flex-col gx-gap-4 gx-mb-8">
-      <div class="gx-alert gx-alert-info"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg><span>Info: Your data never leaves the browser.</span></div>
-      <div class="gx-alert gx-alert-warning"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg><span>Warning: Large files may take longer to process.</span></div>
-      <div class="gx-alert gx-alert-error"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg><span>Error: Invalid FASTA format.</span></div>
+    <h3 class="gx-text-bright gx-mb-6" style="font-size:1.1rem; font-weight:700;">Badges &amp; Tags</h3>
+    <div class="gx-flex gx-gap-4 gx-mb-4" style="flex-wrap:wrap; align-items:center;">
+      <span class="gx-badge gx-badge-success">Shipped</span>
+      <span class="gx-badge gx-badge-active">In Progress</span>
+      <span class="gx-badge gx-badge-muted">Planned</span>
+    </div>
+    <div class="gx-flex gx-gap-2 gx-mb-8" style="flex-wrap:wrap; align-items:center;">
+      <span class="gx-tag">WebAssembly</span>
+      <span class="gx-tag">TypeScript</span>
+      <span class="gx-tag">Vite</span>
+      <span class="gx-tag">Web Workers</span>
+      <span class="gx-tag">SVG</span>
     </div>
 
-    <!-- App Cards -->
-    <h3 class="gx-text-bright gx-mb-6" style="font-size:1.1rem;">App Cards</h3>
+    <!-- Alerts -->
+    <h3 class="gx-text-bright gx-mb-6" style="font-size:1.1rem; font-weight:700;">Alerts</h3>
+    <div class="gx-flex gx-flex-col gx-gap-4 gx-mb-8">
+      <div class="gx-alert gx-alert-info">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+        <span>Info: Your data never leaves the browser. All processing happens locally.</span>
+      </div>
+      <div class="gx-alert gx-alert-warning">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+        <span>Warning: Large files may take longer to process in the browser.</span>
+      </div>
+      <div class="gx-alert gx-alert-error">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>
+        <span>Error: Invalid FASTA format. Please check your input file.</span>
+      </div>
+    </div>
+
+    <!-- Cards -->
+    <h3 class="gx-text-bright gx-mb-6" style="font-size:1.1rem; font-weight:700;">App Cards</h3>
     <div class="gx-grid-2 gx-mb-8">
-      <article class="gx-app-card">
-        <div class="gx-app-card-header"><div class="gx-app-icon" style="background:#14B8A6"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></div><div class="gx-app-meta"><h3>BRIGx</h3><span class="gx-tagline">Circular Genome Comparison</span></div></div>
-        <div class="gx-app-card-body"><p>Generate publication-quality circular plots comparing bacterial genomes.</p></div>
-        <div class="gx-tech-tags"><span class="gx-tag">LASTZ</span><span class="gx-tag">WebAssembly</span><span class="gx-tag">SVG</span></div>
-        <ul class="gx-feature-list"><li>Multi-threaded alignment</li><li>Interactive zoom and pan</li><li>SVG export</li></ul>
-        <div class="gx-app-card-footer"><a href="#" class="gx-btn gx-btn-primary gx-btn-sm">Launch App</a><a href="#" class="gx-btn gx-btn-secondary gx-btn-sm">Source</a></div>
+      <article class="gx-app-card gx-animate-in">
+        <div class="gx-app-card-header">
+          <div class="gx-app-icon" style="background:#14B8A6">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
+          </div>
+          <div class="gx-app-meta">
+            <h3>BRIGx</h3>
+            <span class="gx-tagline">Circular Genome Comparison</span>
+          </div>
+        </div>
+        <div class="gx-app-card-body">
+          <p>Generate publication-quality circular plots comparing bacterial genomes with interactive, zoomable ring diagrams.</p>
+        </div>
+        <div class="gx-tech-tags">
+          <span class="gx-tag">LASTZ</span>
+          <span class="gx-tag">WebAssembly</span>
+          <span class="gx-tag">Web Workers</span>
+          <span class="gx-tag">SVG</span>
+        </div>
+        <ul class="gx-feature-list">
+          <li>Multi-threaded alignment via Web Workers</li>
+          <li>Interactive zoom and pan</li>
+          <li>SVG export for publications</li>
+        </ul>
+        <div class="gx-app-card-footer">
+          <a href="#" class="gx-btn gx-btn-primary gx-btn-sm">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            Launch App
+          </a>
+          <a href="#" class="gx-btn gx-btn-secondary gx-btn-sm">
+            <svg viewBox="0 0 24 24" fill="currentColor" style="width:16px;height:16px;"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+            Source
+          </a>
+        </div>
       </article>
-      <article class="gx-app-card">
-        <div class="gx-app-card-header"><div class="gx-app-icon" style="background:#14B8A6"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 15c6.667-6 13.333 0 20-6"/><path d="M9 22c1.798-1.998 2.518-3.995 2.807-5.993"/><path d="M15 2c-1.798 1.998-2.518 3.995-2.807 5.993"/></svg></div><div class="gx-app-meta"><h3>MLSTx</h3><span class="gx-tagline">Multi-Locus Sequence Typing</span></div></div>
-        <div class="gx-app-card-body"><p>Type bacterial genomes using MLST schemes directly in your browser.</p></div>
-        <div class="gx-tech-tags"><span class="gx-tag">minimap2</span><span class="gx-tag">WebAssembly</span><span class="gx-tag">TypeScript</span></div>
-        <ul class="gx-feature-list"><li>Multiple MLST schemes</li><li>FASTA and gzipped input</li><li>CSV export</li></ul>
-        <div class="gx-app-card-footer"><a href="#" class="gx-btn gx-btn-primary gx-btn-sm">Launch App</a><a href="#" class="gx-btn gx-btn-secondary gx-btn-sm">Source</a></div>
+
+      <article class="gx-app-card gx-animate-in">
+        <div class="gx-app-card-header">
+          <div class="gx-app-icon" style="background:#14B8A6">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 15c6.667-6 13.333 0 20-6"/><path d="M9 22c1.798-1.998 2.518-3.995 2.807-5.993"/><path d="M15 2c-1.798 1.998-2.518 3.995-2.807 5.993"/></svg>
+          </div>
+          <div class="gx-app-meta">
+            <h3>MLSTx</h3>
+            <span class="gx-tagline">Multi-Locus Sequence Typing</span>
+          </div>
+        </div>
+        <div class="gx-app-card-body">
+          <p>Type bacterial genomes using MLST schemes directly in your browser with instant results and CSV export.</p>
+        </div>
+        <div class="gx-tech-tags">
+          <span class="gx-tag">minimap2</span>
+          <span class="gx-tag">WebAssembly</span>
+          <span class="gx-tag">TypeScript</span>
+        </div>
+        <ul class="gx-feature-list">
+          <li>Multiple MLST schemes</li>
+          <li>FASTA and gzipped input</li>
+          <li>CSV export</li>
+        </ul>
+        <div class="gx-app-card-footer">
+          <a href="#" class="gx-btn gx-btn-primary gx-btn-sm">Launch App</a>
+          <a href="#" class="gx-btn gx-btn-secondary gx-btn-sm">Source</a>
+        </div>
       </article>
     </div>
 
     <!-- Generic Cards -->
-    <h3 class="gx-text-bright gx-mb-6" style="font-size:1.1rem;">Generic Cards</h3>
+    <h3 class="gx-text-bright gx-mb-6" style="font-size:1.1rem; font-weight:700;">Generic Cards</h3>
     <div class="gx-grid-3 gx-mb-8">
-      <div class="gx-card"><div class="gx-icon-box gx-mb-4"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div><h3>Accessible Worldwide</h3><p>No installs, no complex setup. Open a browser and start analysing.</p></div>
-      <div class="gx-card"><div class="gx-icon-box gx-mb-4"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div><h3>Privacy by Default</h3><p>Your data never leaves your machine. All computation happens locally.</p></div>
-      <div class="gx-card"><div class="gx-icon-box gx-mb-4"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m18 16 4-4-4-4"/><path d="m6 8-4 4 4 4"/><path d="m14.5 4-5 16"/></svg></div><h3>WebAssembly Powered</h3><p>Real bioinformatics tools compiled to near-native speed.</p></div>
+      <div class="gx-card gx-animate-in">
+        <div class="gx-icon-box gx-mb-4">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        </div>
+        <h3>Accessible Worldwide</h3>
+        <p>No installs, no complex setup. Open a browser and start analysing.</p>
+      </div>
+      <div class="gx-card gx-animate-in">
+        <div class="gx-icon-box gx-mb-4">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+        </div>
+        <h3>Privacy by Default</h3>
+        <p>Your data never leaves your machine. All computation happens locally.</p>
+      </div>
+      <div class="gx-card gx-animate-in">
+        <div class="gx-icon-box gx-mb-4">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 16 4-4-4-4"/><path d="m6 8-4 4 4 4"/><path d="m14.5 4-5 16"/></svg>
+        </div>
+        <h3>WebAssembly Powered</h3>
+        <p>Real bioinformatics tools compiled to near-native speed.</p>
+      </div>
     </div>
 
     <!-- Feature Banner -->
-    <h3 class="gx-text-bright gx-mb-6" style="font-size:1.1rem;">Feature Banner</h3>
+    <h3 class="gx-text-bright gx-mb-6" style="font-size:1.1rem; font-weight:700;">Feature Banner</h3>
   </section>
-  <div class="gx-features-banner" style="margin-bottom:3rem;">
-    <div class="gx-feature-item"><div class="gx-feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/></svg></div><div><h3>Feature One</h3><p>Short description here.</p></div></div>
-    <div class="gx-feature-item"><div class="gx-feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div><div><h3>Feature Two</h3><p>Short description here.</p></div></div>
-    <div class="gx-feature-item"><div class="gx-feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m18 16 4-4-4-4"/><path d="m6 8-4 4 4 4"/></svg></div><div><h3>Feature Three</h3><p>Short description here.</p></div></div>
+
+  <div class="gx-features-banner gx-mb-8">
+    <div class="gx-feature-item gx-animate-in">
+      <div class="gx-feature-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+      </div>
+      <div>
+        <h3>Feature One</h3>
+        <p>Short description of this feature goes here. Keep it to two lines max.</p>
+      </div>
+    </div>
+    <div class="gx-feature-item gx-animate-in">
+      <div class="gx-feature-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+      </div>
+      <div>
+        <h3>Feature Two</h3>
+        <p>Short description of this feature goes here. Keep it to two lines max.</p>
+      </div>
+    </div>
+    <div class="gx-feature-item gx-animate-in">
+      <div class="gx-feature-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 16 4-4-4-4"/><path d="m6 8-4 4 4 4"/><path d="m14.5 4-5 16"/></svg>
+      </div>
+      <div>
+        <h3>Feature Three</h3>
+        <p>Short description of this feature goes here. Keep it to two lines max.</p>
+      </div>
+    </div>
   </div>
 
-  <!-- FORMS -->
-  <div class="gx-divider"><hr></div>
-  <section id="forms" class="gx-section">
-    <div class="gx-section-header">
-      <h2>Forms &amp; Data</h2>
-      <p>Inputs, tables, progress, tabs, and panels for tool UIs.</p>
-    </div>
+  <!-- Form Controls, Tables, Panels -->
+  <section class="gx-section" style="padding-top:0;">
 
     <!-- Tabs -->
+    <h3 class="gx-text-bright gx-mb-6" style="font-size:1.1rem; font-weight:700;">Tabs</h3>
     <div class="gx-panel gx-mb-8">
-      <div class="gx-tabs"><button class="gx-tab active">Upload</button><button class="gx-tab">Results</button><button class="gx-tab">Export</button></div>
-      <div class="gx-tab-content"><p class="gx-text-muted gx-text-sm">Tab content here. Toggle <code class="gx-code">active</code> class with JS.</p></div>
+      <div class="gx-tabs">
+        <button class="gx-tab active">Upload</button>
+        <button class="gx-tab">Results</button>
+        <button class="gx-tab">Export</button>
+        <button class="gx-tab">Settings</button>
+      </div>
+      <div class="gx-tab-content">
+        <p class="gx-text-muted gx-text-sm">Tab content appears here. Use JavaScript to toggle the <code class="gx-code">active</code> class.</p>
+      </div>
     </div>
 
     <!-- Form Controls -->
+    <h3 class="gx-text-bright gx-mb-6" style="font-size:1.1rem; font-weight:700;">Form Controls</h3>
     <div class="gx-panel gx-mb-8">
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;">
-        <div class="gx-input-group"><label class="gx-label">Sample Name</label><input type="text" class="gx-input" placeholder="e.g. Ecoli_K12"></div>
-        <div class="gx-input-group"><label class="gx-label">MLST Scheme</label><select class="gx-select"><option>Escherichia coli #1</option><option>Salmonella enterica</option></select></div>
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:1rem;">
+        <div class="gx-input-group">
+          <label class="gx-label">Sample Name</label>
+          <input type="text" class="gx-input" placeholder="e.g. Ecoli_K12">
+        </div>
+        <div class="gx-input-group">
+          <label class="gx-label">MLST Scheme</label>
+          <select class="gx-select">
+            <option>Escherichia coli #1</option>
+            <option>Salmonella enterica</option>
+            <option>Staphylococcus aureus</option>
+          </select>
+        </div>
       </div>
-      <div class="gx-input-group"><label class="gx-label">Notes</label><textarea class="gx-textarea" placeholder="Optional notes..."></textarea></div>
+      <div class="gx-input-group">
+        <label class="gx-label">Notes</label>
+        <textarea class="gx-textarea" placeholder="Optional notes about this analysis..."></textarea>
+      </div>
       <div class="gx-file-drop">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
         <p><strong class="gx-text-bright">Drop FASTA files here</strong> or click to browse</p>
@@ -170,32 +396,185 @@
       </div>
     </div>
 
-    <!-- Progress -->
+    <!-- Progress & Loading -->
+    <h3 class="gx-text-bright gx-mb-6" style="font-size:1.1rem; font-weight:700;">Progress &amp; Loading</h3>
     <div class="gx-panel gx-mb-8">
-      <div class="gx-flex gx-items-center gx-gap-4 gx-mb-6"><span class="gx-text-sm gx-text-muted" style="min-width:100px;">Progress:</span><div class="gx-progress gx-flex-1"><div class="gx-progress-bar" style="width:65%;"></div></div><span class="gx-text-sm gx-text-accent">65%</span></div>
-      <div class="gx-flex gx-items-center gx-gap-4"><span class="gx-text-sm gx-text-muted" style="min-width:100px;">Spinners:</span><div class="gx-spinner"></div><div class="gx-spinner gx-spinner-lg"></div></div>
+      <div class="gx-flex gx-items-center gx-gap-4 gx-mb-6">
+        <div class="gx-text-sm gx-text-muted" style="min-width:120px;">Progress bar:</div>
+        <div class="gx-progress gx-flex-1">
+          <div class="gx-progress-bar" style="width:65%;"></div>
+        </div>
+        <div class="gx-text-sm gx-text-accent">65%</div>
+      </div>
+      <div class="gx-flex gx-items-center gx-gap-4">
+        <div class="gx-text-sm gx-text-muted" style="min-width:120px;">Spinners:</div>
+        <div class="gx-spinner"></div>
+        <div class="gx-spinner gx-spinner-lg"></div>
+      </div>
     </div>
 
     <!-- Table -->
-    <div class="gx-panel gx-mb-8" style="padding:0;overflow:hidden;">
+    <h3 class="gx-text-bright gx-mb-6" style="font-size:1.1rem; font-weight:700;">Table</h3>
+    <div class="gx-panel gx-mb-8" style="padding:0; overflow:hidden;">
       <table class="gx-table">
-        <thead><tr><th>Sample</th><th>ST</th><th>Scheme</th><th>Status</th></tr></thead>
+        <thead>
+          <tr>
+            <th>Sample</th>
+            <th>ST</th>
+            <th>Scheme</th>
+            <th>Alleles</th>
+            <th>Status</th>
+          </tr>
+        </thead>
         <tbody>
-          <tr><td class="gx-text-bright">Ecoli_K12.fasta</td><td><code>ST-10</code></td><td>E. coli #1</td><td><span class="gx-badge gx-badge-success">Complete</span></td></tr>
-          <tr><td class="gx-text-bright">Salm_typhi.fasta</td><td><code>ST-2</code></td><td>S. enterica</td><td><span class="gx-badge gx-badge-success">Complete</span></td></tr>
-          <tr><td class="gx-text-bright">draft_assembly.fa</td><td><code>--</code></td><td>S. aureus</td><td><span class="gx-badge gx-badge-active">Partial</span></td></tr>
+          <tr>
+            <td class="gx-text-bright">Ecoli_K12.fasta</td>
+            <td><code>ST-10</code></td>
+            <td>E. coli #1</td>
+            <td class="gx-text-mono gx-text-sm">10-11-4-8-8-8-2</td>
+            <td><span class="gx-badge gx-badge-success">Complete</span></td>
+          </tr>
+          <tr>
+            <td class="gx-text-bright">Salm_typhi.fasta</td>
+            <td><code>ST-2</code></td>
+            <td>S. enterica</td>
+            <td class="gx-text-mono gx-text-sm">1-1-1-1-2-1-1</td>
+            <td><span class="gx-badge gx-badge-success">Complete</span></td>
+          </tr>
+          <tr>
+            <td class="gx-text-bright">draft_assembly.fa</td>
+            <td><code>--</code></td>
+            <td>S. aureus</td>
+            <td class="gx-text-mono gx-text-sm">?-3-1-?-4-4-3</td>
+            <td><span class="gx-badge gx-badge-active">Partial</span></td>
+          </tr>
         </tbody>
       </table>
     </div>
 
-    <!-- Panel with header -->
+    <!-- Panels -->
+    <h3 class="gx-text-bright gx-mb-6" style="font-size:1.1rem; font-weight:700;">Panel with Header</h3>
     <div class="gx-panel gx-mb-8">
-      <div class="gx-panel-header"><h3>Analysis Results</h3><button class="gx-btn gx-btn-secondary gx-btn-sm">Export CSV</button></div>
-      <p class="gx-text-sm gx-text-muted">Panel body for results, settings, or grouped content.</p>
+      <div class="gx-panel-header">
+        <h3>Analysis Results</h3>
+        <button class="gx-btn gx-btn-secondary gx-btn-sm">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:14px;height:14px;"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          Export CSV
+        </button>
+      </div>
+      <p class="gx-text-sm gx-text-muted">Panel body content. This is a container for tool results, settings, or grouped content.</p>
+    </div>
+
+    <!-- Code Block -->
+    <h3 class="gx-text-bright gx-mb-6" style="font-size:1.1rem; font-weight:700;">Code Block</h3>
+    <div class="gx-code-block gx-mb-8">&lt;link rel="stylesheet" href="css/genomicx.css"&gt;
+&lt;script src="js/genomicx.js"&gt;&lt;/script&gt;
+
+&lt;!-- Use GenomicX.icon('name') to get SVG strings --&gt;
+&lt;!-- Use GenomicX.buildNav({...}) for the shared nav --&gt;
+&lt;!-- Use GenomicX.buildFooter() for the shared footer --&gt;</div>
+
+  </section>
+
+  <!-- ===== THEME TOGGLE ===== -->
+  <div class="gx-divider"><hr></div>
+
+  <section class="gx-section">
+    <div class="gx-section-header">
+      <h2>Theme Toggle</h2>
+      <p>Dark/light mode with system preference detection. Try the toggle in the nav above.</p>
+    </div>
+
+    <h3 class="gx-text-bright gx-mb-6" style="font-size:1.1rem; font-weight:700;">3-Option Toggle (Dark / System / Light)</h3>
+    <div class="gx-flex gx-items-center gx-gap-6 gx-mb-8">
+      <div class="gx-theme-toggle" role="radiogroup" aria-label="Theme demo">
+        <button class="gx-theme-toggle-option active" data-theme="dark" aria-label="Dark" title="Dark">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+        <button class="gx-theme-toggle-option" data-theme="system" aria-label="System" title="System">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+        </button>
+        <button class="gx-theme-toggle-option" data-theme="light" aria-label="Light" title="Light">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+        </button>
+      </div>
+      <span class="gx-text-sm gx-text-muted">class: <code class="gx-code">gx-theme-toggle</code></span>
+    </div>
+
+    <h3 class="gx-text-bright gx-mb-6" style="font-size:1.1rem; font-weight:700;">Simple Pill Switch</h3>
+    <div class="gx-flex gx-items-center gx-gap-6 gx-mb-8">
+      <div class="gx-flex gx-items-center gx-gap-4">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:16px;height:16px;color:var(--gx-text-muted);"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        <button class="gx-theme-switch" aria-label="Toggle theme"></button>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:16px;height:16px;color:var(--gx-text-muted);"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+      </div>
+      <span class="gx-text-sm gx-text-muted">class: <code class="gx-code">gx-theme-switch</code></span>
+    </div>
+
+    <h3 class="gx-text-bright gx-mb-6" style="font-size:1.1rem; font-weight:700;">JS API</h3>
+    <div class="gx-code-block gx-mb-8" style="font-size:0.75rem;">GenomicX.getTheme()      // Returns 'dark' or 'light'
+GenomicX.setTheme('light') // Set explicitly
+GenomicX.toggleTheme()   // Toggle dark &lt;-&gt; light
+GenomicX.buildThemeToggle() // Returns HTML for the 3-option toggle
+
+// Theme is persisted to localStorage key 'gx-theme'
+// Respects prefers-color-scheme when no manual choice is saved</div>
+
+    <h3 class="gx-text-bright gx-mb-6" style="font-size:1.1rem; font-weight:700;">How It Works</h3>
+    <div class="gx-panel">
+      <ul class="gx-feature-list" style="padding:0;">
+        <li>Set <code class="gx-code">data-theme="dark"</code> or <code class="gx-code">data-theme="light"</code> on <code class="gx-code">&lt;html&gt;</code></li>
+        <li>All <code class="gx-code">--gx-*</code> tokens automatically switch values</li>
+        <li>Without <code class="gx-code">data-theme</code>, respects <code class="gx-code">prefers-color-scheme</code></li>
+        <li>User choice persisted to <code class="gx-code">localStorage</code> as <code class="gx-code">gx-theme</code></li>
+        <li>Smooth 0.3s transition on all themed elements</li>
+      </ul>
     </div>
   </section>
 
-  <!-- FOOTER -->
+  <!-- ===== APP LAYOUT TEMPLATE ===== -->
+  <div class="gx-divider"><hr></div>
+
+  <section class="gx-section">
+    <div class="gx-section-header">
+      <h2>App Layout Template</h2>
+      <p>Recommended page structure for a GenomicX tool application.</p>
+    </div>
+
+    <div class="gx-code-block" style="font-size:0.7rem; line-height:1.7;">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;title&gt;ToolName - GenomicX&lt;/title&gt;
+  &lt;link rel="preconnect" href="https://fonts.googleapis.com"&gt;
+  &lt;link rel="preconnect" href="https://fonts.gstatic.com" crossorigin&gt;
+  &lt;link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800
+    &amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"&gt;
+  &lt;link rel="stylesheet" href="css/genomicx.css"&gt;
+  &lt;link rel="icon" href="images/favicon.svg" type="image/svg+xml"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;!-- Nav (use GenomicX.buildNav() or copy from template) --&gt;
+  &lt;nav class="gx-nav"&gt;...&lt;/nav&gt;
+
+  &lt;!-- App content --&gt;
+  &lt;main class="gx-section"&gt;
+    &lt;div class="gx-panel"&gt;
+      &lt;!-- Your tool UI here --&gt;
+    &lt;/div&gt;
+  &lt;/main&gt;
+
+  &lt;!-- Footer (use GenomicX.buildFooter() or copy) --&gt;
+  &lt;footer class="gx-footer"&gt;...&lt;/footer&gt;
+
+  &lt;script src="js/genomicx.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
   <footer class="gx-footer">
     <div class="gx-footer-inner">
       <span>GenomicX &mdash; open-source bioinformatics for the browser</span>
