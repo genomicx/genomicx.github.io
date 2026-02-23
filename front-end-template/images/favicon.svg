@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none">
+  <!-- GenomicX Favicon (DNA helix on dark background) -->
+  <rect width="32" height="32" rx="6" fill="#0F172A"/>
+  <g transform="translate(2, 2) scale(1.17)" stroke="#14B8A6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M4 15c5.333-4.8 10.667 0 16-4.8"/>
+    <path d="M9.6 21c1.44-1.6 2.02-3.2 2.25-4.8"/>
+    <path d="M14.4 3c-1.44 1.6-2.02 3.2-2.25 4.8"/>
+    <path d="M15.6 6l-2 2"/>
+    <path d="M14 8l-.8.8"/>
+    <path d="M8.8 18l2-2"/>
+    <path d="M6.2 16l.4-.4"/>
+  </g>
+</svg>
