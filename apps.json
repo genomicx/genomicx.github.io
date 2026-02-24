@@ -203,5 +203,51 @@
     "webDev": "not-started",
     "benchmarking": "not-started"
   }
+},
+{
+  "id": "socrux",
+  "name": "Socrux",
+  "tagline": "Genome Structural Typing",
+  "description": "Determine the structural genome profile of bacterial chromosomes based on the organisation of ribosomal RNA operons, entirely in the browser. Upload a genome assembly to identify genomic structural (GS) types by mapping rRNA operon positions and inter-operon fragment order.",
+  "icon": "rings",
+  "tech": ["minimap2", "WebAssembly", "TypeScript", "React"],
+  "features": [
+    "Genomic structural (GS) profile assignment",
+    "10 supported bacterial species",
+    "Circular genome structure aware",
+    "Client-side with no data uploads"
+  ],
+  "demoUrl": "https://socrux.vercel.app",
+  "sourceUrl": "https://github.com/genomicx/socrux",
+  "color": "#14B8A6",
+  "status": {
+    "scoping": "done",
+    "pipeline": "done",
+    "webDev": "done",
+    "benchmarking": "in-progress"
+  }
+},
+{
+  "id": "barrnapx",
+  "name": "Barrnapx",
+  "tagline": "rRNA, tRNA & ncRNA Annotation",
+  "description": "Annotate ribosomal RNA, transfer RNA, and non-coding RNA features in prokaryotic and fungal genomes directly in the browser. Upload a genome assembly to predict RNA coordinates with GFF3 export — a browser-native replacement for barrnap.",
+  "icon": "dna",
+  "tech": ["minimap2", "WebAssembly", "TypeScript", "React"],
+  "features": [
+    "rRNA, tRNA, and ncRNA detection",
+    "Bacteria, archaea, and fungi support",
+    "GFF3 output export",
+    "Fully client-side, no data leaves your machine"
+  ],
+  "demoUrl": "https://barrnapx.vercel.app",
+  "sourceUrl": "https://github.com/genomicx/barrnapx",
+  "color": "#14B8A6",
+  "status": {
+    "scoping": "done",
+    "pipeline": "done",
+    "webDev": "in-progress",
+    "benchmarking": "not-started"
+  }
 }
 ]
