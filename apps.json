@@ -249,5 +249,78 @@
     "webDev": "in-progress",
     "benchmarking": "not-started"
   }
+},
+{
+  "id": "assembly-statsx",
+  "name": "assembly-statsx",
+  "tagline": "Assembly Quality Statistics",
+  "description": "Compute N50, GC content, gap counts, and length distributions from FASTA/FASTQ assemblies in your browser. Replicates assembly-stats with interactive visualisations and multi-file comparison.",
+  "icon": "wrench",
+  "tech": ["TypeScript", "React", "Recharts", "Vite"],
+  "features": [
+    "N50/N60/N70/N80/N90 with L-values",
+    "GC content and N-base statistics",
+    "Length distribution histogram",
+    "N-value curve (N10–N100)",
+    "Cumulative assembly plot",
+    "Multi-file side-by-side comparison",
+    "Client-side — no data leaves your browser"
+  ],
+  "demoUrl": "https://assembly-statsx.vercel.app",
+  "sourceUrl": "https://github.com/happykhan/assembly-statsx",
+  "color": "#14B8A6",
+  "status": {
+    "scoping": "done",
+    "pipeline": "in-progress",
+    "webDev": "not-started",
+    "benchmarking": "not-started"
+  }
+},
+{
+  "id": "snp-distsx",
+  "name": "snp-distsx",
+  "tagline": "SNP Distance Matrix in Your Browser",
+  "description": "Browser-based pairwise SNP distance matrix calculator from aligned FASTA files. Faithful TypeScript reimplementation of Torsten Seemann's snp-dists with interactive heatmap, histogram, and table views.",
+  "icon": "dna",
+  "tech": ["TypeScript", "React", "Vite"],
+  "features": [
+    "Interactive heatmap with colour-coded distance matrix",
+    "Distribution histogram with adjustable cluster threshold",
+    "TSV, CSV, and long (molten) format export",
+    "All snp-dists options (-a, -k, -c, -b, -m, -t, -L, -x)",
+    "Client-side processing — no data leaves your browser"
+  ],
+  "demoUrl": "https://snp-distsx.vercel.app",
+  "sourceUrl": "https://github.com/happykhan/snp-distsx",
+  "color": "#0d9488",
+  "status": {
+    "scoping": "done",
+    "pipeline": "done",
+    "webDev": "done",
+    "benchmarking": "not-started"
+  }
+},
+{
+  "id": "snp-sitesx",
+  "name": "SNP-Sitesx",
+  "tagline": "SNP Site Extraction from Alignments",
+  "description": "Extract SNP sites from multi-FASTA alignments in your browser. Outputs VCF, Phylip, and SNP-only FASTA with interactive visualisations of SNP density, nucleotide frequencies, and pairwise distances.",
+  "icon": "dna",
+  "tech": ["TypeScript", "React", "Recharts", "Vite"],
+  "features": [
+    "VCF, Phylip, and SNP-FASTA export",
+    "SNP density and position visualisations",
+    "Pairwise distance matrix",
+    "Client-side — no data leaves your browser"
+  ],
+  "demoUrl": "https://snp-sitesx.vercel.app",
+  "sourceUrl": "https://github.com/happykhan/snp-sitesx",
+  "color": "#14B8A6",
+  "status": {
+    "scoping": "done",
+    "pipeline": "in-progress",
+    "webDev": "not-started",
+    "benchmarking": "not-started"
+  }
 }
 ]
