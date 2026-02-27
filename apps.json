@@ -203,5 +203,171 @@
     "webDev": "not-started",
     "benchmarking": "not-started"
   }
+},
+{
+  "id": "socrux",
+  "name": "Socrux",
+  "tagline": "Genome Structural Typing",
+  "description": "Determine the structural genome profile of bacterial chromosomes based on the organisation of ribosomal RNA operons, entirely in the browser. Upload a genome assembly to identify genomic structural (GS) types by mapping rRNA operon positions and inter-operon fragment order.",
+  "icon": "rings",
+  "tech": ["minimap2", "WebAssembly", "TypeScript", "React"],
+  "features": [
+    "Genomic structural (GS) profile assignment",
+    "10 supported bacterial species",
+    "Circular genome structure aware",
+    "Client-side with no data uploads"
+  ],
+  "demoUrl": "https://socrux.vercel.app",
+  "sourceUrl": "https://github.com/genomicx/socrux",
+  "color": "#14B8A6",
+  "status": {
+    "scoping": "done",
+    "pipeline": "done",
+    "webDev": "done",
+    "benchmarking": "in-progress"
+  }
+},
+{
+  "id": "barrnapx",
+  "name": "Barrnapx",
+  "tagline": "rRNA, tRNA & ncRNA Annotation",
+  "description": "Annotate ribosomal RNA, transfer RNA, and non-coding RNA features in prokaryotic and fungal genomes directly in the browser. Upload a genome assembly to predict RNA coordinates with GFF3 export — a browser-native replacement for barrnap.",
+  "icon": "dna",
+  "tech": ["minimap2", "WebAssembly", "TypeScript", "React"],
+  "features": [
+    "rRNA, tRNA, and ncRNA detection",
+    "Bacteria, archaea, and fungi support",
+    "GFF3 output export",
+    "Fully client-side, no data leaves your machine"
+  ],
+  "demoUrl": "https://barrnapx.vercel.app",
+  "sourceUrl": "https://github.com/genomicx/barrnapx",
+  "color": "#14B8A6",
+  "status": {
+    "scoping": "done",
+    "pipeline": "done",
+    "webDev": "in-progress",
+    "benchmarking": "not-started"
+  }
+},
+{
+  "id": "assembly-statsx",
+  "name": "assembly-statsx",
+  "tagline": "Assembly Quality Statistics",
+  "description": "Compute N50, GC content, gap counts, and length distributions from FASTA/FASTQ assemblies in your browser. Replicates assembly-stats with interactive visualisations and multi-file comparison.",
+  "icon": "wrench",
+  "tech": ["TypeScript", "React", "Recharts", "Vite"],
+  "features": [
+    "N50/N60/N70/N80/N90 with L-values",
+    "GC content and N-base statistics",
+    "Length distribution histogram",
+    "N-value curve (N10–N100)",
+    "Cumulative assembly plot",
+    "Multi-file side-by-side comparison",
+    "Client-side — no data leaves your browser"
+  ],
+  "demoUrl": "https://assembly-statsx.vercel.app",
+  "sourceUrl": "https://github.com/happykhan/assembly-statsx",
+  "color": "#14B8A6",
+  "status": {
+    "scoping": "done",
+    "pipeline": "in-progress",
+    "webDev": "not-started",
+    "benchmarking": "not-started"
+  }
+},
+{
+  "id": "snp-distsx",
+  "name": "snp-distsx",
+  "tagline": "SNP Distance Matrix in Your Browser",
+  "description": "Browser-based pairwise SNP distance matrix calculator from aligned FASTA files. Faithful TypeScript reimplementation of Torsten Seemann's snp-dists with interactive heatmap, histogram, and table views.",
+  "icon": "dna",
+  "tech": ["TypeScript", "React", "Vite"],
+  "features": [
+    "Interactive heatmap with colour-coded distance matrix",
+    "Distribution histogram with adjustable cluster threshold",
+    "TSV, CSV, and long (molten) format export",
+    "All snp-dists options (-a, -k, -c, -b, -m, -t, -L, -x)",
+    "Client-side processing — no data leaves your browser"
+  ],
+  "demoUrl": "https://snp-distsx.vercel.app",
+  "sourceUrl": "https://github.com/happykhan/snp-distsx",
+  "color": "#0d9488",
+  "status": {
+    "scoping": "done",
+    "pipeline": "done",
+    "webDev": "done",
+    "benchmarking": "not-started"
+  }
+},
+{
+  "id": "snp-sitesx",
+  "name": "SNP-Sitesx",
+  "tagline": "SNP Site Extraction from Alignments",
+  "description": "Extract SNP sites from multi-FASTA alignments in your browser. Outputs VCF, Phylip, and SNP-only FASTA with interactive visualisations of SNP density, nucleotide frequencies, and pairwise distances.",
+  "icon": "dna",
+  "tech": ["TypeScript", "React", "Recharts", "Vite"],
+  "features": [
+    "VCF, Phylip, and SNP-FASTA export",
+    "SNP density and position visualisations",
+    "Pairwise distance matrix",
+    "Client-side — no data leaves your browser"
+  ],
+  "demoUrl": "https://snp-sitesx.vercel.app",
+  "sourceUrl": "https://github.com/happykhan/snp-sitesx",
+  "color": "#14B8A6",
+  "status": {
+    "scoping": "done",
+    "pipeline": "in-progress",
+    "webDev": "not-started",
+    "benchmarking": "not-started"
+  }
+},
+{
+  "id": "scagairex",
+  "name": "ScagaireX",
+  "tagline": "AMR Gene Species Filter",
+  "description": "Filter antimicrobial resistance gene predictions by bacterial species in your browser. Upload Abricate, StarAMR, or RGI-CARD output and remove genes not known to occur in the target species — reducing noise from commensal flora.",
+  "icon": "shield",
+  "tech": ["TypeScript", "React", "Vite"],
+  "features": [
+    "Supports Abricate, StarAMR, and RGI-CARD input formats",
+    "Auto-detects input format from header",
+    "Species-specific gene filtering with occurrence threshold",
+    "Client-side processing — no data leaves your browser"
+  ],
+  "demoUrl": "https://scagairex.vercel.app",
+  "sourceUrl": "https://github.com/happykhan/scagairex",
+  "color": "#14B8A6",
+  "status": {
+    "scoping": "done",
+    "pipeline": "done",
+    "webDev": "in-progress",
+    "benchmarking": "not-started"
+  }
+},
+{
+  "id": "madansix",
+  "name": "madansix",
+  "tagline": "Contig Scaffolding via Pan-Genome Synteny",
+  "description": "Reorder and reorient fragmented bacterial genome assembly contigs using gene synteny from a pan-genome reference. Upload your assembly FASTA, pan-genome FASTA, and Roary graph — get a scaffolded assembly in your browser.",
+  "icon": "link",
+  "tech": ["minimap2", "WebAssembly", "TypeScript", "Vite", "D3.js"],
+  "features": [
+    "Pan-genome guided contig scaffolding",
+    "Minimap2 alignment via WebAssembly",
+    "Interactive contig connectivity visualisation",
+    "Before/after N50 statistics",
+    "Client-side processing — no data leaves your browser"
+  ],
+  "demoUrl": "https://madansix.vercel.app",
+  "sourceUrl": "https://github.com/happykhan/madansix",
+  "color": "#14B8A6",
+  "status": {
+    "scoping": "done",
+    "pipeline": "in-progress",
+    "webDev": "not-started",
+    "benchmarking": "not-started"
+  }
 }
 ]
