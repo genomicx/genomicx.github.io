@@ -322,5 +322,52 @@
     "webDev": "not-started",
     "benchmarking": "not-started"
   }
+},
+{
+  "id": "scagairex",
+  "name": "ScagaireX",
+  "tagline": "AMR Gene Species Filter",
+  "description": "Filter antimicrobial resistance gene predictions by bacterial species in your browser. Upload Abricate, StarAMR, or RGI-CARD output and remove genes not known to occur in the target species — reducing noise from commensal flora.",
+  "icon": "shield",
+  "tech": ["TypeScript", "React", "Vite"],
+  "features": [
+    "Supports Abricate, StarAMR, and RGI-CARD input formats",
+    "Auto-detects input format from header",
+    "Species-specific gene filtering with occurrence threshold",
+    "Client-side processing — no data leaves your browser"
+  ],
+  "demoUrl": "https://scagairex.vercel.app",
+  "sourceUrl": "https://github.com/happykhan/scagairex",
+  "color": "#14B8A6",
+  "status": {
+    "scoping": "done",
+    "pipeline": "done",
+    "webDev": "in-progress",
+    "benchmarking": "not-started"
+  }
+},
+{
+  "id": "madansix",
+  "name": "madansix",
+  "tagline": "Contig Scaffolding via Pan-Genome Synteny",
+  "description": "Reorder and reorient fragmented bacterial genome assembly contigs using gene synteny from a pan-genome reference. Upload your assembly FASTA, pan-genome FASTA, and Roary graph — get a scaffolded assembly in your browser.",
+  "icon": "link",
+  "tech": ["minimap2", "WebAssembly", "TypeScript", "Vite", "D3.js"],
+  "features": [
+    "Pan-genome guided contig scaffolding",
+    "Minimap2 alignment via WebAssembly",
+    "Interactive contig connectivity visualisation",
+    "Before/after N50 statistics",
+    "Client-side processing — no data leaves your browser"
+  ],
+  "demoUrl": "https://madansix.vercel.app",
+  "sourceUrl": "https://github.com/happykhan/madansix",
+  "color": "#14B8A6",
+  "status": {
+    "scoping": "done",
+    "pipeline": "in-progress",
+    "webDev": "not-started",
+    "benchmarking": "not-started"
+  }
 }
 ]
