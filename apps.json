@@ -3,7 +3,7 @@
     "id": "brigx",
     "name": "BRIGx",
     "tagline": "Circular Genome Comparison",
-    "description": "Generate publication-quality circular plots comparing bacterial genomes. Upload a reference and query genomes to visualize sequence similarity with interactive, zoomable ring diagrams.",
+    "description": "Tests whether pairwise genome alignment (LASTZ) can run client-side with multi-threaded Web Workers. Upload a reference and query genomes to generate interactive circular comparison plots.",
     "icon": "rings",
     "tech": ["LASTZ", "WebAssembly", "Web Workers", "SVG"],
     "features": [
@@ -26,7 +26,7 @@
     "id": "mlstx",
     "name": "MLSTx",
     "tagline": "Multi-Locus Sequence Typing",
-    "description": "Type bacterial genomes using MLST schemes directly in your browser. Supports E. coli, Salmonella, S. aureus and more with instant results and CSV export.",
+    "description": "Explores running minimap2 in the browser for real-time sequence typing against curated MLST schemes. Supports E. coli, Salmonella, S. aureus and more with CSV export.",
     "icon": "dna",
     "tech": ["minimap2", "WebAssembly", "Biowasm", "TypeScript"],
     "features": [
@@ -49,7 +49,7 @@
     "id": "mashtreewebx",
     "name": "MashtreeWebx",
     "tagline": "Rapid Distance Trees",
-    "description": "Build quick phylogenetic trees from genome assemblies using Mash distances. Get a neighbor-joining tree in seconds, entirely in your browser.",
+    "description": "Investigates Mash sketch-based distance estimation compiled to WASM for rapid neighbour-joining tree construction from genome assemblies.",
     "icon": "tree",
     "tech": ["Mash", "WebAssembly", "TypeScript", "Vite"],
     "features": [
@@ -72,7 +72,7 @@
     "id": "ronaqc",
     "name": "RonaQC",
     "tagline": "SARS-CoV-2 Sequencing QC",
-    "description": "Quality control for SARS-CoV-2 sequencing data. Upload BAM files to assess cross-contamination, primer coverage, and consensus quality. Determine if samples are reliable for phylogenetic analysis and public database submission.",
+    "description": "Examines whether a full QC pipeline (samtools + ivar) can run client-side on BAM files. Assess cross-contamination, primer coverage, and consensus quality for SARS-CoV-2 sequencing data.",
     "icon": "shield",
     "tech": ["samtools", "ivar", "WebAssembly", "Next.js"],
     "features": [
