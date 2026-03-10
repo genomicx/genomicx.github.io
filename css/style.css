@@ -850,11 +850,11 @@ a.btn-primary:hover,
   margin-bottom: 0;
 }
 
-.about-card a {
+.about-card a:not(.btn) {
   color: var(--gx-accent);
 }
 
-.about-card a:hover {
+.about-card a:not(.btn):hover {
   color: var(--gx-accent-hover);
 }
 
