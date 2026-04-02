@@ -12,8 +12,8 @@
       "SVG export for publications",
       "Supports draft assemblies"
     ],
-    "demoUrl": "https://brigx-eight.vercel.app",
-    "sourceUrl": "https://github.com/genomicx/brigx",
+    "demoUrl": "https://brigx.genomicx.org",
+    "sourceUrl": "https://github.com/happykhan/brigx",
     "color": "#14B8A6",
     "status": {
       "scoping": "done",
@@ -35,7 +35,7 @@
       "CSV export",
       "Dark and light mode"
     ],
-    "demoUrl": "https://mlstx.vercel.app",
+    "demoUrl": "https://mlstx.genomicx.org",
     "sourceUrl": "https://github.com/genomicx/mlstx",
     "color": "#14B8A6",
     "status": {
@@ -47,8 +47,8 @@
   },
   {
     "id": "mashtreewebx",
-    "name": "MashtreeWebx",
-    "tagline": "Rapid Distance Trees",
+    "name": "MashtreeWebX",
+    "tagline": "Mash Distance Phylogenetic Trees",
     "description": "Investigates Mash sketch-based distance estimation compiled to WASM for rapid neighbour-joining tree construction from genome assemblies.",
     "icon": "tree",
     "tech": ["Mash", "WebAssembly", "TypeScript", "Vite"],
@@ -58,7 +58,7 @@
       "Fast, client-side processing",
       "Interactive tree viewer"
     ],
-    "demoUrl": "https://mashtreewebx.vercel.app",
+    "demoUrl": "",
     "sourceUrl": "https://github.com/genomicx/mashtreewebx",
     "color": "#14B8A6",
     "status": {
@@ -81,7 +81,7 @@
       "Consensus generation with QC judgement",
       "CSV/TSV export and interactive plots"
     ],
-    "demoUrl": "https://rona-qc.vercel.app",
+    "demoUrl": "https://ronaqc.genomicx.org",
     "sourceUrl": "https://github.com/genomicx/ronaQC",
     "color": "#14B8A6",
     "status": {
@@ -184,18 +184,20 @@
     }
   },
 {
-  "id": "Consensusx",
-  "name": "Consensusx",
-  "tagline": "Consensus sequence generation",
-  "description": "Convert sequenced reads into high-quality consensus sequences for downstream analyses",
+  "id": "consensusx",
+  "name": "ConsensusX",
+  "tagline": "Read Mapping and De Novo Assembly",
+  "description": "Read mapping and de novo assembly entirely in the browser. Convert sequenced reads into high-quality consensus sequences for downstream analyses.",
   "icon": "wrench",
   "tech": ["WebAssembly", "TypeScript"],
   "features": [
     "Read preprocessing (quality trimming, adapter removal)",
-    "Reference-guided  consensus calling"
+    "Reference-guided consensus calling",
+    "De novo assembly support",
+    "Client-side — no data leaves your browser"
   ],
   "demoUrl": "",
-  "sourceUrl": "",
+  "sourceUrl": "https://github.com/genomicx/consensusx",
   "color": "#14B8A6",
   "status": {
     "scoping": "in-progress",
@@ -344,6 +346,75 @@
     "pipeline": "done",
     "webDev": "in-progress",
     "benchmarking": "not-started"
+  }
+},
+{
+  "id": "mashx",
+  "name": "MashX",
+  "tagline": "Species ID and Metagenomics",
+  "description": "Mash distance-based species identification and metagenomics screening directly in your browser. Upload genome assemblies or reads to rapidly identify species and screen for contamination using the Kalamari database.",
+  "icon": "microscope",
+  "tech": ["Mash", "WebAssembly", "TypeScript", "React", "Vite"],
+  "features": [
+    "Mash distance-based species identification",
+    "Metagenomics contamination screening",
+    "Kalamari database (v5.8.3)",
+    "Client-side — no data leaves your browser"
+  ],
+  "demoUrl": "https://mashx.genomicx.org",
+  "sourceUrl": "https://github.com/genomicx/mashx",
+  "color": "#14B8A6",
+  "status": {
+    "scoping": "done",
+    "pipeline": "done",
+    "webDev": "done",
+    "benchmarking": "in-progress"
+  }
+},
+{
+  "id": "barcodex",
+  "name": "barcodex",
+  "tagline": "Lab Barcode Generator",
+  "description": "Generate lab barcodes in your browser — Data Matrix, QR codes, and more. Produce print-ready barcode labels for samples, plates, and lab inventory without any server-side processing.",
+  "icon": "wrench",
+  "tech": ["TypeScript", "React", "Vite"],
+  "features": [
+    "Data Matrix and QR code generation",
+    "Print-ready label output",
+    "Batch barcode generation",
+    "Client-side — no data leaves your browser"
+  ],
+  "demoUrl": "https://barcodex.genomicx.org",
+  "sourceUrl": "",
+  "color": "#14B8A6",
+  "status": {
+    "scoping": "done",
+    "pipeline": "done",
+    "webDev": "done",
+    "benchmarking": "done"
+  }
+},
+{
+  "id": "conference-bingo",
+  "name": "Conference Bingo",
+  "tagline": "Conference Bingo Card Generator",
+  "description": "Generate and play conference bingo cards in your browser. Fill your card with overused buzzwords and phrases from academic talks — mark them off as they happen. A fun tool for conferences and seminars.",
+  "icon": "zap",
+  "tech": ["TypeScript", "React", "Vite"],
+  "features": [
+    "Custom bingo card generation",
+    "Pre-loaded with academic conference phrases",
+    "Shareable card links",
+    "Fun side project by Nabil"
+  ],
+  "demoUrl": "https://conferencebingo.vercel.app",
+  "sourceUrl": "",
+  "color": "#8B5CF6",
+  "status": {
+    "scoping": "done",
+    "pipeline": "done",
+    "webDev": "done",
+    "benchmarking": "done"
   }
 },
 {
