@@ -6,8 +6,7 @@
     "description": "Circular genome comparison tool running BLAST (formatdb + blastall) entirely in the browser via WebAssembly. Upload a reference and query genomes to generate interactive circular comparison plots \u2014 a browser-native replacement for the original BRIG.",
     "icon": "rings",
     "tech": [
-      "BLAST",
-      "WebAssembly"
+      "BLAST"
     ],
     "features": [
       "Multi-threaded alignment via Web Workers",
@@ -32,8 +31,7 @@
     "description": "A complete web clone of tseemann/mlst running BLAST via WebAssembly for real-time sequence typing against curated MLST schemes. Supports E. coli, Salmonella, S. aureus and more with CSV export.",
     "icon": "dna",
     "tech": [
-      "BLAST",
-      "WebAssembly"
+      "BLAST"
     ],
     "features": [
       "Multiple MLST schemes",
@@ -59,8 +57,7 @@
     "icon": "tree",
     "tech": [
       "Mash",
-      "mashtree",
-      "WebAssembly"
+      "mashtree"
     ],
     "features": [
       "Mash distance estimation",
@@ -86,8 +83,7 @@
     "icon": "shield",
     "tech": [
       "samtools",
-      "ivar",
-      "WebAssembly"
+      "ivar"
     ],
     "features": [
       "Negative control contamination check",
@@ -112,8 +108,7 @@
     "description": "Identify bacterial species and assess assembly quality directly in the browser. Upload genome assemblies to get rapid taxonomic classification, contamination screening, and completeness metrics \u2014 no server required.",
     "icon": "microscope",
     "tech": [
-      "Mash",
-      "WebAssembly"
+      "Mash"
     ],
     "features": [
       "Rapid species identification from assemblies",
@@ -140,8 +135,7 @@
     "tech": [
       "BLAST",
       "CARD",
-      "VFDB",
-      "WebAssembly"
+      "VFDB"
     ],
     "features": [
       "AMR gene detection from assemblies",
@@ -166,8 +160,7 @@
     "description": "Type plasmid replicons using pMLST schemes entirely in the browser. Identify plasmid incompatibility groups and sequence types from bacterial genome assemblies with instant, privacy-preserving analysis.",
     "icon": "link",
     "tech": [
-      "minimap2",
-      "WebAssembly"
+      "minimap2"
     ],
     "features": [
       "Plasmid replicon typing",
@@ -192,8 +185,7 @@
     "description": "Run classic EBI-EMBOSS sequence analysis utilities directly in your browser. Access widely-used tools for sequence alignment, restriction analysis, and motif searching \u2014 all client-side with no uploads to external servers.",
     "icon": "wrench",
     "tech": [
-      "EMBOSS",
-      "WebAssembly"
+      "EMBOSS"
     ],
     "features": [
       "Classic EMBOSS utilities in-browser",
@@ -219,8 +211,7 @@
     "icon": "wrench",
     "tech": [
       "minimap2",
-      "samtools",
-      "WebAssembly"
+      "samtools"
     ],
     "features": [
       "Read preprocessing (quality trimming, adapter removal)",
@@ -245,8 +236,7 @@
     "description": "Determine the structural genome profile of bacterial chromosomes based on the organisation of ribosomal RNA operons, entirely in the browser. Upload a genome assembly to identify genomic structural (GS) types by mapping rRNA operon positions and inter-operon fragment order.",
     "icon": "rings",
     "tech": [
-      "minimap2",
-      "WebAssembly"
+      "minimap2"
     ],
     "features": [
       "Genomic structural (GS) profile assignment",
@@ -272,8 +262,7 @@
     "icon": "dna",
     "tech": [
       "minimap2",
-      "barrnap",
-      "WebAssembly"
+      "barrnap"
     ],
     "features": [
       "rRNA, tRNA, and ncRNA detection",
@@ -404,8 +393,7 @@
     "icon": "microscope",
     "tech": [
       "Mash",
-      "Kalamari",
-      "WebAssembly"
+      "Kalamari"
     ],
     "features": [
       "Mash distance-based species identification",
@@ -480,8 +468,7 @@
     "icon": "link",
     "tech": [
       "minimap2",
-      "Roary",
-      "WebAssembly"
+      "Roary"
     ],
     "features": [
       "Pan-genome guided contig scaffolding",
