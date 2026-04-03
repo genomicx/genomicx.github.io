@@ -7,9 +7,7 @@
     "icon": "rings",
     "tech": [
       "LASTZ",
-      "WebAssembly",
-      "Web Workers",
-      "SVG"
+      "WebAssembly"
     ],
     "features": [
       "Multi-threaded alignment via Web Workers",
@@ -35,8 +33,7 @@
     "icon": "dna",
     "tech": [
       "BLAST",
-      "WebAssembly",
-      "TypeScript"
+      "WebAssembly"
     ],
     "features": [
       "Multiple MLST schemes",
@@ -62,9 +59,8 @@
     "icon": "tree",
     "tech": [
       "Mash",
-      "WebAssembly",
-      "TypeScript",
-      "Vite"
+      "mashtree",
+      "WebAssembly"
     ],
     "features": [
       "Mash distance estimation",
@@ -91,8 +87,7 @@
     "tech": [
       "samtools",
       "ivar",
-      "WebAssembly",
-      "Vite"
+      "WebAssembly"
     ],
     "features": [
       "Negative control contamination check",
@@ -118,9 +113,7 @@
     "icon": "microscope",
     "tech": [
       "Mash",
-      "WebAssembly",
-      "TypeScript",
-      "Vite"
+      "WebAssembly"
     ],
     "features": [
       "Rapid species identification from assemblies",
@@ -146,9 +139,9 @@
     "icon": "zap",
     "tech": [
       "BLAST",
-      "WebAssembly",
-      "TypeScript",
-      "Vite"
+      "CARD",
+      "VFDB",
+      "WebAssembly"
     ],
     "features": [
       "AMR gene detection from assemblies",
@@ -174,9 +167,7 @@
     "icon": "link",
     "tech": [
       "minimap2",
-      "WebAssembly",
-      "TypeScript",
-      "Vite"
+      "WebAssembly"
     ],
     "features": [
       "Plasmid replicon typing",
@@ -202,9 +193,7 @@
     "icon": "wrench",
     "tech": [
       "EMBOSS",
-      "WebAssembly",
-      "TypeScript",
-      "Vite"
+      "WebAssembly"
     ],
     "features": [
       "Classic EMBOSS utilities in-browser",
@@ -229,8 +218,9 @@
     "description": "Read mapping and de novo assembly entirely in the browser. Convert sequenced reads into high-quality consensus sequences for downstream analyses.",
     "icon": "wrench",
     "tech": [
-      "WebAssembly",
-      "TypeScript"
+      "minimap2",
+      "samtools",
+      "WebAssembly"
     ],
     "features": [
       "Read preprocessing (quality trimming, adapter removal)",
@@ -256,9 +246,7 @@
     "icon": "rings",
     "tech": [
       "minimap2",
-      "WebAssembly",
-      "TypeScript",
-      "React"
+      "WebAssembly"
     ],
     "features": [
       "Genomic structural (GS) profile assignment",
@@ -284,9 +272,8 @@
     "icon": "dna",
     "tech": [
       "minimap2",
-      "WebAssembly",
-      "TypeScript",
-      "React"
+      "barrnap",
+      "WebAssembly"
     ],
     "features": [
       "rRNA, tRNA, and ncRNA detection",
@@ -311,10 +298,7 @@
     "description": "Compute N50, GC content, gap counts, and length distributions from FASTA/FASTQ assemblies in your browser. Replicates assembly-stats with interactive visualisations and multi-file comparison.",
     "icon": "wrench",
     "tech": [
-      "TypeScript",
-      "React",
-      "Recharts",
-      "Vite"
+      "assembly-stats"
     ],
     "features": [
       "N50/N60/N70/N80/N90 with L-values",
@@ -342,9 +326,7 @@
     "description": "Browser-based pairwise SNP distance matrix calculator from aligned FASTA files. Faithful TypeScript reimplementation of Torsten Seemann's snp-dists with interactive heatmap, histogram, and table views.",
     "icon": "dna",
     "tech": [
-      "TypeScript",
-      "React",
-      "Vite"
+      "snp-dists"
     ],
     "features": [
       "Interactive heatmap with colour-coded distance matrix",
@@ -370,10 +352,7 @@
     "description": "Extract SNP sites from multi-FASTA alignments in your browser. Outputs VCF, Phylip, and SNP-only FASTA with interactive visualisations of SNP density, nucleotide frequencies, and pairwise distances.",
     "icon": "dna",
     "tech": [
-      "TypeScript",
-      "React",
-      "Recharts",
-      "Vite"
+      "snp-sites"
     ],
     "features": [
       "VCF, Phylip, and SNP-FASTA export",
@@ -398,9 +377,8 @@
     "description": "Filter antimicrobial resistance gene predictions by bacterial species in your browser. Upload Abricate, StarAMR, or RGI-CARD output and remove genes not known to occur in the target species \u2014 reducing noise from commensal flora.",
     "icon": "shield",
     "tech": [
-      "TypeScript",
-      "React",
-      "Vite"
+      "Abricate",
+      "RGI-CARD"
     ],
     "features": [
       "Supports Abricate, StarAMR, and RGI-CARD input formats",
@@ -426,10 +404,8 @@
     "icon": "microscope",
     "tech": [
       "Mash",
-      "WebAssembly",
-      "TypeScript",
-      "React",
-      "Vite"
+      "Kalamari",
+      "WebAssembly"
     ],
     "features": [
       "Mash distance-based species identification",
@@ -454,9 +430,8 @@
     "description": "Generate lab barcodes in your browser \u2014 Data Matrix, QR codes, and more. Produce print-ready barcode labels for samples, plates, and lab inventory without any server-side processing.",
     "icon": "wrench",
     "tech": [
-      "TypeScript",
-      "React",
-      "Vite"
+      "Data Matrix",
+      "QR Code"
     ],
     "features": [
       "Data Matrix and QR code generation",
@@ -480,11 +455,7 @@
     "tagline": "Conference Bingo Card Generator",
     "description": "Generate and play conference bingo cards in your browser. Fill your card with overused buzzwords and phrases from academic talks \u2014 mark them off as they happen. A fun tool for conferences and seminars.",
     "icon": "zap",
-    "tech": [
-      "TypeScript",
-      "React",
-      "Vite"
-    ],
+    "tech": [],
     "features": [
       "Custom bingo card generation",
       "Pre-loaded with academic conference phrases",
@@ -509,10 +480,8 @@
     "icon": "link",
     "tech": [
       "minimap2",
-      "WebAssembly",
-      "TypeScript",
-      "Vite",
-      "D3.js"
+      "Roary",
+      "WebAssembly"
     ],
     "features": [
       "Pan-genome guided contig scaffolding",
