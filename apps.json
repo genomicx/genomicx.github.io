@@ -26,9 +26,9 @@
     "id": "mlstx",
     "name": "MLSTx",
     "tagline": "Multi-Locus Sequence Typing",
-    "description": "Explores running minimap2 in the browser for real-time sequence typing against curated MLST schemes. Supports E. coli, Salmonella, S. aureus and more with CSV export.",
+    "description": "A complete web clone of tseemann/mlst running BLAST via WebAssembly for real-time sequence typing against curated MLST schemes. Supports E. coli, Salmonella, S. aureus and more with CSV export.",
     "icon": "dna",
-    "tech": ["minimap2", "WebAssembly", "Biowasm", "TypeScript"],
+    "tech": ["BLAST", "WebAssembly", "TypeScript"],
     "features": [
       "Multiple MLST schemes",
       "FASTA and gzipped input",
@@ -42,7 +42,7 @@
       "scoping": "done",
       "pipeline": "done",
       "webDev": "done",
-      "benchmarking": "in-progress"
+      "benchmarking": "done"
     }
   },
   {
@@ -58,7 +58,7 @@
       "Fast, client-side processing",
       "Interactive tree viewer"
     ],
-    "demoUrl": "",
+    "demoUrl": "https://mashtreex.genomicx.org",
     "sourceUrl": "https://github.com/genomicx/mashtreewebx",
     "color": "#14B8A6",
     "status": {
@@ -74,7 +74,7 @@
     "tagline": "SARS-CoV-2 Sequencing QC",
     "description": "Examines whether a full QC pipeline (samtools + ivar) can run client-side on BAM files. Assess cross-contamination, primer coverage, and consensus quality for SARS-CoV-2 sequencing data.",
     "icon": "shield",
-    "tech": ["samtools", "ivar", "WebAssembly", "Next.js"],
+    "tech": ["samtools", "ivar", "WebAssembly", "Vite"],
     "features": [
       "Negative control contamination check",
       "Per-sample coverage and amplicon analysis",
@@ -82,7 +82,7 @@
       "CSV/TSV export and interactive plots"
     ],
     "demoUrl": "https://ronaqc.genomicx.org",
-    "sourceUrl": "https://github.com/genomicx/ronaQC",
+    "sourceUrl": "https://github.com/happykhan/ronaQC",
     "color": "#14B8A6",
     "status": {
       "scoping": "done",
@@ -127,13 +127,13 @@
       "Detailed gene annotations and reports",
       "CSV and JSON export"
     ],
-    "demoUrl": "",
+    "demoUrl": "https://genetrax.genomicx.org",
     "sourceUrl": "https://github.com/genomicx/genetrax",
     "color": "#14B8A6",
     "status": {
       "scoping": "done",
       "pipeline": "in-progress",
-      "webDev": "in-progress",
+      "webDev": "done",
       "benchmarking": "not-started"
     }
   },
@@ -196,13 +196,13 @@
     "De novo assembly support",
     "Client-side — no data leaves your browser"
   ],
-  "demoUrl": "",
+  "demoUrl": "https://consensusx.genomicx.org",
   "sourceUrl": "https://github.com/genomicx/consensusx",
   "color": "#14B8A6",
   "status": {
-    "scoping": "in-progress",
-    "pipeline": "not-started",
-    "webDev": "not-started",
+    "scoping": "done",
+    "pipeline": "done",
+    "webDev": "done",
     "benchmarking": "not-started"
   }
 },
@@ -385,7 +385,7 @@
     "Client-side — no data leaves your browser"
   ],
   "demoUrl": "https://barcodex.genomicx.org",
-  "sourceUrl": "",
+  "sourceUrl": "https://github.com/genomicx/barcodex",
   "color": "#14B8A6",
   "status": {
     "scoping": "done",
@@ -407,8 +407,8 @@
     "Shareable card links",
     "Fun side project by Nabil"
   ],
-  "demoUrl": "https://conferencebingo.vercel.app",
-  "sourceUrl": "",
+  "demoUrl": "https://conferencebingo.genomicx.org",
+  "sourceUrl": "https://github.com/genomicx/conferencebingo",
   "color": "#8B5CF6",
   "status": {
     "scoping": "done",

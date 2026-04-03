@@ -164,23 +164,23 @@
     <div class="roadmap-grid">
       <div class="roadmap-item animate-in">
         <div class="roadmap-status done">Explored</div>
-        <h3>Alignment, typing, distance trees, QC</h3>
-        <p>Four tool classes successfully ported: pairwise alignment (LASTZ), sequence typing (minimap2), sketch-based distances (Mash), and read-level QC (samtools + ivar).</p>
+        <h3>Alignment, typing, distance trees, QC, AMR, and more</h3>
+        <p>Multiple tool classes successfully ported: pairwise alignment (LASTZ via BRIGx), MLST/BLAST typing (MLSTx), Mash distance trees (MashX), read-level QC (RonaQC), AMR genotyping (Genetrax), and phylogenetics (MashtreeWebX).</p>
       </div>
       <div class="roadmap-item animate-in">
         <div class="roadmap-status active">In Progress</div>
-        <h3>Broader organism coverage</h3>
-        <p>How many MLST schemes and reference databases can be bundled client-side before download size becomes prohibitive?</p>
-      </div>
-      <div class="roadmap-item animate-in">
-        <div class="roadmap-status planned">Investigating</div>
-        <h3>AMR detection in the browser</h3>
-        <p>Can AMR gene detection (e.g. AMRFinderPlus) run at acceptable speed compiled to WebAssembly?</p>
+        <h3>Test coverage and shared UI</h3>
+        <p>Adding Playwright end-to-end test coverage across tools, building a shared <code>@genomicx/ui</code> component library, and improving cross-tool consistency in layout, theming, and output formats.</p>
       </div>
       <div class="roadmap-item animate-in">
         <div class="roadmap-status planned">Investigating</div>
         <h3>Client-side workflow chaining</h3>
         <p>Is it feasible to pipe output from one WASM tool into another entirely client-side, without a server-side orchestrator?</p>
+      </div>
+      <div class="roadmap-item animate-in">
+        <div class="roadmap-status planned">Investigating</div>
+        <h3>Broader organism and scheme coverage</h3>
+        <p>How many MLST schemes and reference databases can be bundled client-side before download size becomes prohibitive?</p>
       </div>
     </div>
   </section>
