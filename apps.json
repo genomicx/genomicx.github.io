@@ -128,12 +128,12 @@
       "CSV and JSON export"
     ],
     "demoUrl": "",
-    "sourceUrl": "",
+    "sourceUrl": "https://github.com/genomicx/genetrax",
     "color": "#14B8A6",
     "status": {
-      "scoping": "in-progress",
-      "pipeline": "not-started",
-      "webDev": "not-started",
+      "scoping": "done",
+      "pipeline": "in-progress",
+      "webDev": "in-progress",
       "benchmarking": "not-started"
     }
   },
