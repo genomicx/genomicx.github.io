@@ -3,10 +3,10 @@
     "id": "brigx",
     "name": "BRIGx",
     "tagline": "Circular Genome Comparison",
-    "description": "Tests whether pairwise genome alignment (LASTZ) can run client-side with multi-threaded Web Workers. Upload a reference and query genomes to generate interactive circular comparison plots.",
+    "description": "Circular genome comparison tool running BLAST (formatdb + blastall) entirely in the browser via WebAssembly. Upload a reference and query genomes to generate interactive circular comparison plots \u2014 a browser-native replacement for the original BRIG.",
     "icon": "rings",
     "tech": [
-      "LASTZ",
+      "BLAST",
       "WebAssembly"
     ],
     "features": [
