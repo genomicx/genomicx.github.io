@@ -57,7 +57,7 @@
     "icon": "tree",
     "tech": [
       "Mash",
-      "mashtree"
+      "patristic"
     ],
     "features": [
       "Mash distance estimation",
@@ -83,6 +83,7 @@
     "icon": "shield",
     "tech": [
       "samtools",
+      "minimap2",
       "ivar"
     ],
     "features": [
@@ -135,7 +136,11 @@
     "tech": [
       "BLAST",
       "CARD",
-      "VFDB"
+      "VFDB",
+      "NCBI AMR",
+      "ResFinder",
+      "PlasmidFinder",
+      "MEGARes"
     ],
     "features": [
       "AMR gene detection from assemblies",
@@ -211,7 +216,7 @@
     "icon": "wrench",
     "tech": [
       "minimap2",
-      "samtools"
+      "Sparrowhawk"
     ],
     "features": [
       "Read preprocessing (quality trimming, adapter removal)",
