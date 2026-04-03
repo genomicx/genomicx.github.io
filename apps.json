@@ -28,16 +28,19 @@
     "id": "mlstx",
     "name": "MLSTx",
     "tagline": "Multi-Locus Sequence Typing",
-    "description": "A complete web clone of tseemann/mlst running BLAST via WebAssembly for real-time sequence typing against curated MLST schemes. Supports E. coli, Salmonella, S. aureus and more with CSV export.",
+    "description": "Browser-based MLST typing matching tseemann/mlst output. Runs BLAST (blastall + formatdb) via WebAssembly for real-time scheme typing. Per-file auto-detection from 162+ PubMLST schemes, plus MUSCLE multiple alignment and FastTree phylogenetics for multi-genome datasets.",
     "icon": "dna",
     "tech": [
-      "BLAST"
+      "BLAST",
+      "MUSCLE",
+      "FastTree",
+      "minimap2"
     ],
     "features": [
-      "Multiple MLST schemes",
-      "FASTA and gzipped input",
-      "CSV export",
-      "Dark and light mode"
+      "162+ PubMLST schemes with per-file auto-detection",
+      "BLAST-based allele calling (tseemann/mlst compatible output)",
+      "MUSCLE + FastTree phylogenetic tree from allele alignments",
+      "CSV export and Newick / MSA download"
     ],
     "demoUrl": "https://mlstx.genomicx.org",
     "sourceUrl": "https://github.com/genomicx/mlstx",
