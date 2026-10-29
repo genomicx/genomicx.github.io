@@ -955,28 +955,6 @@ a.btn-primary:hover,
   color: var(--gx-text);
 }
 
-/* ===== Newsletter ===== */
-.newsletter-card {
-  max-width: 560px;
-  margin: 0 auto;
-  text-align: center;
-}
-
-.newsletter-card h2 {
-  font-size: 1.75rem;
-  font-weight: 700;
-  letter-spacing: -0.025em;
-  margin-bottom: 0.75rem;
-  color: var(--gx-text);
-}
-
-.newsletter-card p {
-  color: var(--gx-text-muted);
-  font-size: 1.05rem;
-  margin-bottom: 1.5rem;
-  line-height: 1.75;
-}
-
 /* ===== Footer ===== */
 .footer {
   margin-top: auto;
