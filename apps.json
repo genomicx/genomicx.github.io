@@ -252,7 +252,7 @@
       "Circular genome structure aware",
       "Client-side with no data uploads"
     ],
-    "demoUrl": "https://socrux.vercel.app",
+    "demoUrl": "https://socrux.genomicx.org",
     "sourceUrl": "https://github.com/genomicx/socrux",
     "color": "#14B8A6",
     "status": {
@@ -278,7 +278,7 @@
       "GFF3 output export",
       "Fully client-side, no data leaves your machine"
     ],
-    "demoUrl": "https://barrnapx.vercel.app",
+    "demoUrl": "https://barrnapx.genomicx.org",
     "sourceUrl": "https://github.com/genomicx/barrnapx",
     "color": "#14B8A6",
     "status": {
@@ -306,7 +306,7 @@
       "Multi-file side-by-side comparison",
       "Client-side \u2014 no data leaves your browser"
     ],
-    "demoUrl": "https://assembly-statsx.vercel.app",
+    "demoUrl": "https://assembly-statsx.genomicx.org",
     "sourceUrl": "https://github.com/happykhan/assembly-statsx",
     "color": "#14B8A6",
     "status": {
@@ -332,7 +332,7 @@
       "All snp-dists options (-a, -k, -c, -b, -m, -t, -L, -x)",
       "Client-side processing \u2014 no data leaves your browser"
     ],
-    "demoUrl": "https://snp-distsx.vercel.app",
+    "demoUrl": "https://snp-distsx.genomicx.org",
     "sourceUrl": "https://github.com/happykhan/snp-distsx",
     "color": "#0d9488",
     "status": {
@@ -357,7 +357,7 @@
       "Pairwise distance matrix",
       "Client-side \u2014 no data leaves your browser"
     ],
-    "demoUrl": "https://snp-sitesx.vercel.app",
+    "demoUrl": "https://snp-sitesx.genomicx.org",
     "sourceUrl": "https://github.com/happykhan/snp-sitesx",
     "color": "#14B8A6",
     "status": {
@@ -383,7 +383,7 @@
       "Species-specific gene filtering with occurrence threshold",
       "Client-side processing \u2014 no data leaves your browser"
     ],
-    "demoUrl": "https://scagairex.vercel.app",
+    "demoUrl": "https://scagairex.genomicx.org",
     "sourceUrl": "https://github.com/happykhan/scagairex",
     "color": "#14B8A6",
     "status": {
@@ -485,7 +485,7 @@
       "Before/after N50 statistics",
       "Client-side processing \u2014 no data leaves your browser"
     ],
-    "demoUrl": "https://madansix.vercel.app",
+    "demoUrl": "https://madansix.genomicx.org",
     "sourceUrl": "https://github.com/happykhan/madansix",
     "color": "#14B8A6",
     "status": {

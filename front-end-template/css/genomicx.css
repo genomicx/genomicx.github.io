@@ -6,9 +6,6 @@
  * and component styles for all GenomicX applications.
  *
  * Usage:
- *   <link rel="preconnect" href="https://fonts.googleapis.com">
- *   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
- *   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
  *   <link rel="stylesheet" href="css/genomicx.css">
  */
 
@@ -34,8 +31,8 @@
   --gx-max-width:    1080px;
   --gx-nav-height:   60px;
 
-  --gx-font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
-  --gx-font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+  --gx-font-sans: 'IBM Plex Sans', ui-sans-serif, system-ui, sans-serif;
+  --gx-font-mono: 'IBM Plex Mono', ui-monospace, monospace;
 
   --gx-space-1:  0.25rem;
   --gx-space-2:  0.5rem;

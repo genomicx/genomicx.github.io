@@ -7,59 +7,14 @@
   box-sizing: border-box;
 }
 
-/* --- Light theme (default, ronaQC canonical) --- */
+/* Shared colours, fonts and radii come from published @genomicx/ui tokens.
+   Keep the original website width and transition; this is not an app shell. */
 :root {
-  --gx-bg: #f8fafc;
-  --gx-bg-alt: #f1f5f9;
-  --gx-surface: #ffffff;
-  --gx-surface-hover: #f1f5f9;
-  --gx-border: #e2e8f0;
-  --gx-text: #0f172a;
-  --gx-text-muted: #64748b;
-  --gx-text-inverted: #ffffff;
-  --gx-accent: #0d9488;
-  --gx-accent-hover: #0f766e;
-  --gx-accent-dim: rgba(13, 148, 136, 0.08);
-  --gx-success: #0d9488;
-  --gx-warning: #F59E0B;
-  --gx-error: #EF4444;
-  --gx-info: #6366F1;
-  --gx-indigo: #6366F1;
-  --gx-indigo-dim: rgba(99, 102, 241, 0.08);
-  --gx-radius: 8px;
-  --gx-radius-lg: 12px;
-  --gx-transition: 0.2s ease;
   --gx-max-width: 1080px;
-  --gx-font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
-  --gx-font-mono: 'JetBrains Mono', 'Fira Code', monospace;
-  --gx-nav-bg: rgba(255, 255, 255, 0.9);
-  --gx-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  --gx-indigo-dim: color-mix(in srgb, var(--gx-indigo) 8%, transparent);
   color-scheme: light;
 }
-
-/* --- Dark theme --- */
-[data-theme="dark"] {
-  --gx-bg: #0f172a;
-  --gx-bg-alt: #1e293b;
-  --gx-surface: #1e293b;
-  --gx-surface-hover: #334155;
-  --gx-border: #334155;
-  --gx-text: #f1f5f9;
-  --gx-text-muted: #94a3b8;
-  --gx-text-inverted: #0f172a;
-  --gx-accent: #2dd4bf;
-  --gx-accent-hover: #14b8a6;
-  --gx-accent-dim: rgba(45, 212, 191, 0.1);
-  --gx-success: #2dd4bf;
-  --gx-warning: #F59E0B;
-  --gx-error: #EF4444;
-  --gx-info: #818CF8;
-  --gx-indigo: #818CF8;
-  --gx-indigo-dim: rgba(99, 102, 241, 0.15);
-  --gx-nav-bg: rgba(15, 23, 42, 0.9);
-  --gx-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
-  color-scheme: dark;
-}
+[data-theme="dark"] { color-scheme: dark; }
 
 html {
   scroll-behavior: smooth;
@@ -1161,3 +1116,8 @@ a.btn-primary:hover,
     padding: 1.5rem 0;
   }
 }
+
+/* The charcoal navigation uses shared navigation foreground tokens in both themes. */
+.nav { --gx-text: var(--gx-nav-text); --gx-text-muted: var(--gx-nav-muted); }
+@media (max-width: 768px) { .nav-links { background: var(--gx-nav-bg); } }
+.app-card-footer span.btn-primary { background: var(--gx-disabled-bg); color: var(--gx-disabled-text); opacity: 1 !important; }

@@ -2,7 +2,7 @@
 
 A portfolio site showcasing browser-based bioinformatics tools powered by WebAssembly.
 
-**Live site:** Deployed as a static site (compatible with Vercel, Netlify, GitHub Pages, or any static host).
+**Live site:** [genomicx.org](https://genomicx.org), deployed from this repository’s `main` branch through the existing Cloudflare Pages project `genomicx` (`genomicx-github-io.pages.dev`).
 
 ## Adding a New Tool
 
@@ -20,7 +20,7 @@ Edit `apps.json` and add a new entry:
     "Feature one",
     "Feature two"
   ],
-  "demoUrl": "https://mytool.vercel.app",
+  "demoUrl": "https://mytool.genomicx.org",
   "sourceUrl": "https://github.com/happykhan/mytool",
   "color": "#8b5cf6"
 }
@@ -62,3 +62,7 @@ apps.json       - Tool definitions (edit this to add tools)
 css/style.css   - Styles
 js/main.js      - App rendering logic
 ```
+
+## Shared theme
+
+The site uses the published `@genomicx/ui` 0.10.1 tokens and bundled IBM Plex fonts, vendored for static hosting. See [provenance and refresh instructions](vendor/genomicx-ui/README.md). No build or package installation is needed. Layout and catalogue ordering remain local to this website.
