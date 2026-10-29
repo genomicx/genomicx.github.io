@@ -54,5 +54,5 @@ GenomicX.initNav()                // Wire up mobile hamburger
 
 ## Fonts
 
-- **Inter** — UI text (400, 500, 600, 700, 800)
-- **JetBrains Mono** — Code, tech tags, monospace (400, 500)
+- **IBM Plex Sans** — UI text (400, 500, 600, 700, 800)
+- **IBM Plex Mono** — Code, tech tags, monospace (400, 500)

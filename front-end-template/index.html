@@ -157,7 +157,7 @@
   <section id="typography" class="gx-section">
     <div class="gx-section-header">
       <h2>Typography</h2>
-      <p>Inter for UI text, JetBrains Mono for code and technical labels.</p>
+      <p>IBM Plex Sans for UI text, IBM Plex Mono for code and technical labels.</p>
     </div>
 
     <div class="gx-panel gx-mb-8">
@@ -166,16 +166,16 @@
       <h3 style="font-size:1.05rem; font-weight:700; color:var(--gx-text-bright); margin-bottom:0.5rem;">Card Heading h3</h3>
       <p style="color:var(--gx-text-muted); line-height:1.75; margin-bottom:0.5rem;">Body text: GenomicX compiles established, peer-reviewed bioinformatics tools into WebAssembly modules that run entirely in your browser.</p>
       <p style="font-size:0.85rem; color:var(--gx-text-muted); line-height:1.6; margin-bottom:0.5rem;">Small text: Used for descriptions, feature lists, and secondary content.</p>
-      <p style="font-family:var(--gx-font-mono); font-size:0.8rem; color:var(--gx-accent);">Monospace: JetBrains Mono for code, tech tags, and identifiers.</p>
+      <p style="font-family:var(--gx-font-mono); font-size:0.8rem; color:var(--gx-accent);">Monospace: IBM Plex Mono for code, tech tags, and identifiers.</p>
     </div>
 
     <div class="gx-flex gx-gap-4" style="flex-wrap:wrap;">
       <div>
-        <div class="gx-text-xs gx-text-muted gx-mb-4" style="text-transform:uppercase; letter-spacing:0.05em; font-weight:600;">Sans (Inter)</div>
+        <div class="gx-text-xs gx-text-muted gx-mb-4" style="text-transform:uppercase; letter-spacing:0.05em; font-weight:600;">Sans (IBM Plex Sans)</div>
         <div class="gx-code-block" style="min-width:280px;">font-family: var(--gx-font-sans);</div>
       </div>
       <div>
-        <div class="gx-text-xs gx-text-muted gx-mb-4" style="text-transform:uppercase; letter-spacing:0.05em; font-weight:600;">Mono (JetBrains Mono)</div>
+        <div class="gx-text-xs gx-text-muted gx-mb-4" style="text-transform:uppercase; letter-spacing:0.05em; font-weight:600;">Mono (IBM Plex Mono)</div>
         <div class="gx-code-block" style="min-width:280px;">font-family: var(--gx-font-mono);</div>
       </div>
     </div>
@@ -640,10 +640,7 @@ GenomicX.buildThemeToggle() // Returns HTML for the 3-option toggle
   &lt;meta charset="UTF-8"&gt;
   &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
   &lt;title&gt;ToolName - GenomicX&lt;/title&gt;
-  &lt;link rel="preconnect" href="https://fonts.googleapis.com"&gt;
-  &lt;link rel="preconnect" href="https://fonts.gstatic.com" crossorigin&gt;
-  &lt;link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800
-    &amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"&gt;
+  &lt;link rel="stylesheet" href="../vendor/genomicx-ui/tokens.css"&gt;
   &lt;link rel="stylesheet" href="css/genomicx.css"&gt;
   &lt;link rel="icon" href="images/favicon.svg" type="image/svg+xml"&gt;
   &lt;script&gt;

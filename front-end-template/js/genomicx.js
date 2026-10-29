@@ -113,12 +113,12 @@ const GenomicX = (() => {
    * @param {object} opts
    * @param {string} opts.appName - Name shown after "GenomicX /"
    * @param {string} [opts.activePage] - Current page identifier
-   * @param {string} [opts.homeUrl] - URL for the GenomicX home link (default: https://genomicx.vercel.app)
+   * @param {string} [opts.homeUrl] - URL for the GenomicX home link (default: https://genomicx.org)
    * @param {string} [opts.sourceUrl] - GitHub repo URL for this app
    * @returns {string} HTML string for the nav element.
    */
   function buildNav({ appName, activePage, homeUrl, sourceUrl }) {
-    homeUrl = homeUrl || 'https://genomicx.vercel.app';
+    homeUrl = homeUrl || 'https://genomicx.org';
     sourceUrl = sourceUrl || 'https://github.com/genomicx';
 
     return `
@@ -159,7 +159,7 @@ const GenomicX = (() => {
         <span>GenomicX &mdash; open-source bioinformatics for the browser</span>
         <ul class="gx-footer-links">
           <li><a href="https://github.com/genomicx" target="_blank" rel="noopener">GitHub</a></li>
-          <li><a href="https://genomicx.vercel.app/about">Mission</a></li>
+          <li><a href="https://genomicx.org/about.html">Mission</a></li>
           <li><a href="https://www.happykhan.com/" target="_blank" rel="noopener">Nabil-Fareed Alikhan</a></li>
         </ul>
       </div>
