@@ -494,5 +494,32 @@
       "webDev": "not-started",
       "benchmarking": "not-started"
     }
+  },
+  {
+    "id": "grapetree",
+    "name": "GrapeTree",
+    "tagline": "Allele-Profile Trees and Visualisation",
+    "description": "Build minimum spanning and neighbour-joining trees from allele profiles entirely in the browser, with WebAssembly-backed MSTreeV2 and RapidNJ calculations. Explore results using GrapeTree's interactive tree and metadata visualiser.",
+    "icon": "tree",
+    "tech": [
+      "MSTreeV2",
+      "RapidNJ",
+      "WebAssembly"
+    ],
+    "features": [
+      "MSTree, MSTreeV2, NJ and RapidNJ methods",
+      "Allele-profile input",
+      "Interactive tree and metadata visualisation",
+      "Client-side calculation in a Web Worker"
+    ],
+    "demoUrl": "https://grapetree.genomicx.org/browser-wasm/",
+    "sourceUrl": "https://github.com/achtman-lab/GrapeTree",
+    "color": "#14B8A6",
+    "status": {
+      "scoping": "done",
+      "pipeline": "done",
+      "webDev": "done",
+      "benchmarking": "not-started"
+    }
   }
 ]
